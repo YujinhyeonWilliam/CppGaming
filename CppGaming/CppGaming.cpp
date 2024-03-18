@@ -1,12 +1,40 @@
 #include <iostream>
-
-int hp;
-short mp;
+using namespace std;
 
 int main()
 {
-    hp = 0b1100; // 0b: 2진법 (bin)
-    mp = 0xF; // 0x: 8진법 (hex)
+	int N;
+	std::cin >> N;
 
-    std::cout << mp;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			if (j < i)
+				cout << " ";
+			else
+				cout << "*";
+		}
+		cout << endl;
+	}
 }
+
+
+/* Pyramid Downward
+
+	int N;
+	std::cin >> N;
+
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N - i; j++)
+		{
+			if (j < i)
+				cout << " ";
+			else
+				cout << "*";
+		}
+		cout << endl;
+	}
+
+*/
