@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\CppProjects\CppGaming\x64\Debug\CppGaming.exe</FullPath>
+      <FullPath>C:\Projects\CppGaming\x64\Debug\CppGaming.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

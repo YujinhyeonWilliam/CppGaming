@@ -1,9 +1,18 @@
 #include <iostream>
 using namespace std;
 
+void Test(int a)
+{
+	char b;
+	int acd;
+	float asff;
+	unsigned long long bvv;
+	return;
+}
+
 int main()
 {
-
+	Test(1);
 }
 
 

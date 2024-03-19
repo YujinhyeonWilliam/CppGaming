@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-CppGaming",
+      "appliesTo": "CppGaming/CppGaming.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-CppGaming",
+      "appliesTo": "CppGaming/",
+      "type": "launch"
+    }
+  ]
+}
