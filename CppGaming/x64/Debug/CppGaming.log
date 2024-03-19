@@ -1,6 +1,4 @@
 ﻿  CppGaming.cpp
-C:\Projects\CppGaming\CppGaming\CppGaming.cpp(7,6): warning C4101: 'acd' :참조되지 않은 지역 변수입니다.
-C:\Projects\CppGaming\CppGaming\CppGaming.cpp(6,7): warning C4101: 'b' :참조되지 않은 지역 변수입니다.
-C:\Projects\CppGaming\CppGaming\CppGaming.cpp(8,8): warning C4101: 'asff' :참조되지 않은 지역 변수입니다.
-C:\Projects\CppGaming\CppGaming\CppGaming.cpp(9,21): warning C4101: 'bvv' :참조되지 않은 지역 변수입니다.
-  CppGaming.vcxproj -> C:\Projects\CppGaming\x64\Debug\CppGaming.exe
+  Helper.cpp
+  코드를 생성하고 있습니다...
+  CppGaming.vcxproj -> C:\CppProjects\CppGaming\x64\Debug\CppGaming.exe
