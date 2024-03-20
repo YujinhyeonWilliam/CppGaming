@@ -1,106 +1,35 @@
-#include <iostream>
 #include "Helper.h"
-using namespace std;
+#include <windows.h>
 
-PlayerType playerType;
-int hp;
-int attack;
-int defence;
 
-EnemyType monsterType;
-int monsterHp;
-int monsterAttack;
-int monsterDefence;
+MoveDir GMoveDir;
 
-void EnterLobby()
+void HandleKeyInput()
 {
-	while (true)
-	{
-		cout << "-------------------------------" << endl;
-		cout << "로비에 입장 했습니다!" << endl;
-		cout << "-------------------------------" << endl;
-
-		SelectPlayer();
-		CreateRandomMonster();
-	}
+	if (::GetAsyncKeyState(VK_LEFT) & 0x8000)
+		GMoveDir = MD_LEFT;
+	else if (::GetAsyncKeyState(VK_RIGHT) & 0x8000)
+		GMoveDir = MD_RIGHT;
+	else if (::GetAsyncKeyState(VK_UP) & 0x8000)
+		GMoveDir = MD_UP;
+	else if (::GetAsyncKeyState(VK_DOWN) & 0x8000)
+		GMoveDir = MD_DOWN;
+	else
+		GMoveDir = MD_NONE;
 }
 
-void SelectPlayer()
+void SetCursorPosition(int x, int y)
 {
-	while (true)
-	{
-		cout << "-------------------------------" << endl;
-		cout << "직업을 골라주세요!" << endl;
-		cout << "(1) 기사 (2) 궁수 (3) 법사" << endl;
-		cout << "-------------------------------" << endl;
-		cout << "> ";
-
-		int choice;
-		cin >> choice;
-
-		switch (choice)
-		{
-		case 1:
-			cout << "기사 생성중... " << endl;
-			hp = 150;
-			attack = 10;
-			defence = 8;
-			playerType = PlayerType::PT_Knight;
-			break;
-		case 2:
-			cout << "아처 생성중... " << endl;
-			hp = 100;
-			attack = 15;
-			defence = 5;
-			playerType = PlayerType::PT_Archer;
-			break;
-		case 3:
-			cout << "법사 생성중... " << endl;
-			hp = 80;
-			attack = 30;
-			defence = 2;
-			playerType = PlayerType::PT_Mage;
-			break;
-		default:
-			break;
-		}
-
-
-		break;
-	}
-
-
+	HANDLE output = ::GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD pos = { (SHORT)x, (SHORT)y };
+	::SetConsoleCursorPosition(output, pos);
 }
 
-void CreateRandomMonster()
+void SetCursorOnOff(bool visible)
 {
-
-	int randomChoice = 1 + (rand() % 3);
-	switch (randomChoice)
-	{
-	case EnemyType::ET_Slime:
-		cout << " 슬라임 소환" << endl;
-		break;
-	case EnemyType::ET_Orc:
-		cout << " 오크 소환" << endl;
-		break;
-	case EnemyType::ET_Skeleton:
-		cout << " 스켈레톤 소환" << endl;
-		break;
-	}
-
-	WaitForNextKey();
+	HANDLE output = ::GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO cursorInfo;
+	::GetConsoleCursorInfo(output, &cursorInfo);
+	cursorInfo.bVisible = visible;
+	::SetConsoleCursorInfo(output, &cursorInfo);
 }
-
-void WaitForNextKey()
-{
-
-	cout << "계속하려면 1을 눌러주세요" << endl;
-	cout << "> ";
-
-	int input;
-	cin >> input;
-	system("cls");
-}
-
-

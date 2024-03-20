@@ -1,32 +1,16 @@
 #pragma once
 
-enum PlayerType
+enum MoveDir
 {
-	PT_None = 0,
-	PT_Knight = 1,
-	PT_Archer = 2,
-	PT_Mage = 3,
+	MD_NONE,
+	MD_LEFT,
+	MD_RIGHT,
+	MD_UP,
+	MD_DOWN,
 };
 
-enum EnemyType
-{
-	ET_None = 0,
-	ET_Slime = 1,
-	ET_Orc = 2,
-	ET_Skeleton = 3,
-};
+void SetCursorPosition(int x, int y);
+void SetCursorOnOff(bool visible);
+void HandleKeyInput();
 
-void EnterLobby();
-void SelectPlayer();
-void CreateRandomMonster();
-void WaitForNextKey();
-
-extern PlayerType playerType;
-extern int hp;
-extern int attack;
-extern int defence;
-
-extern EnemyType monsterType;
-extern int monsterHp;
-extern int monsterAttack;
-extern int monsterDefence;
+extern MoveDir GMoveDir;
