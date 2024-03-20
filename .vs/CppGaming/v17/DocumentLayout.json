@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
               "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T09:21:13.415Z",
               "IsPinned": true,
@@ -68,8 +68,7 @@
               "RelativeToolTip": "CppGaming\\Player.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T00:33:01.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T00:33:01.053Z"
             },
             {
               "$type": "Document",
@@ -81,8 +80,7 @@
               "RelativeToolTip": "CppGaming\\Map.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T00:09:34.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T00:09:34.836Z"
             },
             {
               "$type": "Document",
@@ -94,8 +92,7 @@
               "RelativeToolTip": "CppGaming\\Helper.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T12:05:35.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T12:05:35.118Z"
             }
           ]
         },
@@ -113,8 +110,7 @@
               "RelativeToolTip": "CppGaming\\Player.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T00:33:10.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T00:33:10.603Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "CppGaming\\Map.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T00:09:36.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T00:09:36.75Z"
             },
             {
               "$type": "Document",
