@@ -7,28 +7,20 @@
       "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\CppGaming.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Helper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Helper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Helper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Helper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Helper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Helper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,10 +40,23 @@
               "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
               "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEIAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T09:21:13.415Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Helper.h",
+              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Helper.h",
+              "RelativeDocumentMoniker": "CppGaming\\Helper.h",
+              "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Helper.h",
+              "RelativeToolTip": "CppGaming\\Helper.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-22T10:37:02.549Z",
               "EditorCaption": ""
             },
             {
@@ -60,45 +65,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.h",
               "RelativeDocumentMoniker": "CppGaming\\Player.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.h",
               "RelativeToolTip": "CppGaming\\Player.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T00:33:01.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Map.h",
-              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Map.h",
-              "RelativeDocumentMoniker": "CppGaming\\Map.h",
-              "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Map.h",
-              "RelativeToolTip": "CppGaming\\Map.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T00:09:34.836Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Helper.h",
-              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Helper.h",
-              "RelativeDocumentMoniker": "CppGaming\\Helper.h",
-              "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Helper.h",
-              "RelativeToolTip": "CppGaming\\Helper.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T12:05:35.118Z"
+              "WhenOpened": "2024-03-22T08:07:51.797Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
@@ -108,31 +90,20 @@
               "RelativeDocumentMoniker": "CppGaming\\Player.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.cpp",
               "RelativeToolTip": "CppGaming\\Player.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T00:33:10.603Z"
+              "WhenOpened": "2024-03-22T08:07:55Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Map.cpp",
-              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Map.cpp",
-              "RelativeDocumentMoniker": "CppGaming\\Map.cpp",
-              "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Map.cpp",
-              "RelativeToolTip": "CppGaming\\Map.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T00:09:36.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Helper.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Helper.cpp",
               "RelativeDocumentMoniker": "CppGaming\\Helper.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Helper.cpp",
               "RelativeToolTip": "CppGaming\\Helper.cpp",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAwwB0AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-19T12:05:51.683Z",
               "EditorCaption": ""

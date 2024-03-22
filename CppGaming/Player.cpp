@@ -1,70 +1,62 @@
 #include "Player.h"
-#include "Map.h"
-#include "Helper.h"
+#include <iostream>
 
-int GPlayerX = 2;
-int GPlayerY = 2;
-bool canMove = true;
 
-void MovePlayer(int x, int y)
+#pragma region Public Methods
+
+void Player::Attack()
 {
-	// 범위 체크
-	if (x < 0 || x >= MAP_SIZE)
-		return;
 
-	if (y < 0 || y >= MAP_SIZE)
-		return;
-
-
-	// 벽 체크
-	int index = y * MAP_SIZE + x;
-	if (GMap1D[index] == 1)
-		return;
-	if (GMap2D[y][x] == 1)
-		return;
-
-	// 기존 위치 정리
-	{
-		int prevIndex = GPlayerY * MAP_SIZE + GPlayerX;
-		GMap1D[prevIndex] = 0;
-		GMap2D[GPlayerY][GPlayerX] = 0;
-	}
-
-	// 새 위치 이동
-	GPlayerX = x;
-	GPlayerY = y;
-	GMap1D[index] = 2;
-	GMap2D[GPlayerY][GPlayerX] = 2;
 }
 
-
-void HandleMove()
+void Player::Die()
 {
-	// 키보드를 떼고 있으면, 다음 번엔 움직일 수 있다.
-	if (GMoveDir == MD_NONE)
-	{
-		canMove = true;
-		return;
-	}
 
-	if (!canMove)
-		return;
-
-	canMove = false;
-
-	switch (GMoveDir)
-	{
-	case MD_LEFT:
-		MovePlayer(GPlayerX - 1, GPlayerY);
-		break;
-	case MD_RIGHT:
-		MovePlayer(GPlayerX + 1, GPlayerY);
-		break;
-	case MD_DOWN:
-		MovePlayer(GPlayerX, GPlayerY + 1);
-		break;
-	case MD_UP:
-		MovePlayer(GPlayerX, GPlayerY - 1);
-		break;
-	}
 }
+
+void Player::Heal(int healValue)
+{
+	_hp += healValue;
+}
+
+void Player::PrintHP()
+{
+	std::cout << "Hp = " << this->_hp << std::endl;
+}
+
+#pragma endregion
+
+
+#pragma region Private Methods
+
+Player::Player(const Player& other)
+{
+	_hp = other._hp;
+	_attack = other._attack;
+	_defence = other._defence;
+	std::cout << "Copy Player Constructor!" << std::endl;
+}
+
+// 기본 생성자
+Player::Player()
+{
+	_hp = 100;
+	_attack = 10;
+	_defence = 50;
+	std::cout << "Player Constructor!" << std::endl;
+}
+
+Player::Player(int hp, int attack, int defence)
+{
+	_hp = hp;
+	_attack = attack;
+	_defence = defence;
+	std::cout << "Player Constructor!" << std::endl;
+}
+
+Player::~Player()
+{
+	std::cout << "Player Destructor!" << std::endl;
+}
+
+#pragma endregion
