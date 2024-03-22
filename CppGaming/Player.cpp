@@ -59,7 +59,7 @@ Player::Player()
 	_hp = 100;
 	_attack = 10;
 	_defence = 50;
-	//std::cout << "Player Constructor!" << std::endl;
+	std::cout << "Player Constructor!" << std::endl;
 }
 
 Player::Player(int hp, int attack, int defence)

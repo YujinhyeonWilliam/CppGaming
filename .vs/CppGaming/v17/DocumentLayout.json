@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\CppGaming.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\Helper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
               "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T09:21:13.415Z",
               "IsPinned": true,
@@ -65,13 +65,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.h",
               "RelativeDocumentMoniker": "CppGaming\\Player.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.h",
               "RelativeToolTip": "CppGaming\\Player.h",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAUwBoAAAAeAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwB4AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-22T08:07:51.797Z",
               "EditorCaption": ""
@@ -84,13 +84,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.cpp",
               "RelativeDocumentMoniker": "CppGaming\\Player.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.cpp",
               "RelativeToolTip": "CppGaming\\Player.cpp",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAACcAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-22T08:07:55Z",
               "EditorCaption": ""
