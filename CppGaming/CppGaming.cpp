@@ -1,58 +1,65 @@
 #include <iostream>
 using namespace std;
 
-struct StatInfo
+// 로또 번호 생성기
+void Swap(int& a, int& b)
 {
-	int hp;
-	int attack;
-	int defence;
-};
-
-
-// 1. 값(복사) 전달 방식
-void PrintByCopy(StatInfo player)
-{
-	cout << "-------------" << endl;
-	cout << "HP : " << player.hp << endl;
-	cout << "ATT : " << player.attack << endl;
-	cout << "DEF : " << player.defence << endl;
-	cout << "-------------" << endl;
+	int temp = a;
+	a = b;
+	b = temp;
 }
 
- // 2. 주소 전달 방식
-void PrintByPointer(StatInfo* player)
+void BubbleSort(int* numbers, int length)
 {
-	cout << "-------------" << endl;
-	cout << "HP : " << player->hp << endl;
-	cout << "ATT : " << player->attack << endl;
-	cout << "DEF : " << player->defence << endl;
-	cout << "-------------" << endl;
+	for (int i = 0; i < length; i++)
+	{
+		for (int j = 0; j < length - 1 - i; j++)
+		{
+			if (numbers[j] > numbers[j + 1])
+			{
+				Swap(numbers[j], numbers[j + 1]);
+			}
+		}
+	}
 }
 
-// 3) 참조 전달 방식 (원본 값을 유지하며, 복사비용을 아끼기 위해서 const 사용)
-
-// 아래와 같이 OUT 키워드를 넣으면 확실하게 이 함수 안에서 수정하는 코드가 있다는 것을 알려주는 암묵적 룰이 있다.
-// 언리얼 샘플 코드에서도 간혹 보이므로 이상한 코드 형태가 아님
-#define OUT
-void PrintByRef(OUT StatInfo& player)
+void ChooseLotto(int* numbers)
 {
-	player.hp = 0;
+	int count = 0;
 
-	cout << "-------------" << endl;
-	cout << "HP : " << player.hp << endl;
-	cout << "ATT : " << player.attack << endl;
-	cout << "DEF : " << player.defence << endl;
-	cout << "-------------" << endl;
+	while (count != 6)
+	{
+		// 1 ~ 45
+		int randValue = 1 + rand() % 45;
+
+		bool found = false;
+		for (int i = 0; i < count; i++)
+		{
+			if (numbers[i] == randValue)
+			{
+				found = true;
+				break;
+			}
+		}
+
+		if (found == false)
+		{
+ 		   numbers[count] = randValue;
+  		   count++;
+		}
+	}
+
+	BubbleSort(numbers, 6);
 }
 
 int main()
 {
-	StatInfo player = { 100, 10, 1 };
-	PrintByCopy(player);
+	srand((unsigned int)time(0));
+	int lotto[6];
+	ChooseLotto(lotto);
 
-	StatInfo* ptr = nullptr;
-	PrintByPointer(&player);
-	PrintByRef(OUT player);
+	for (int i = 0; i < 6; i++)
+		cout << lotto[i] << endl;
 }
 
 
