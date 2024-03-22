@@ -1,72 +1,78 @@
 #include <iostream>
 using namespace std;
 
-struct StatInfo
+int StrLen(const char* str)
 {
-	int hp;
-	int attack;
-	int defence;
-};
+	int count = 0;
 
-StatInfo CreatePlayer()
-{
-	StatInfo info;
-	cout << " 플레이어 생성 " << endl;
-	info.hp = 100;
-	info.attack = 10;
-	info.defence = 2;
-
-	return info;
-}
-
-void CreateMonster(StatInfo* info)
-{
-	info->hp = 40;
-	info->attack = 8;
-	info->defence = 1;
-}
-
-void Battle(StatInfo* player, StatInfo* monster)
-{
-	while (true)
+	while (str[count] != '\0')
 	{
-	  int damage = player->attack - monster->defence;
-
-	  if (damage < 0)
-		  damage = 0;
-
-	  monster->hp -= damage;
-	  if (monster->hp < 0)
-		  monster->hp = 0;
-
-	  cout << " 몬스터 HP : " << monster->hp << endl;
-
-	  if (monster->hp == 0)
-		  return;
-
-	  damage = monster->attack - player->defence;
-	  if (damage < 0)
-		  damage = 0;
-
-	  cout << " 플레이어 HP : " << player->hp << endl;
-
-	  player->hp -= damage;
-	  if (player->hp < 0)
-		  player->hp = 0;
-
-	  if (player->hp == 0)
-		  return;
+		count++;
 	}
 
+	return count;
+}
+
+char* StrCpy(char* dest, char* src)
+{
+	char* ret = dest;
+
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+
+	*dest = 0;
+	return ret;
+}
+
+char* StrCat(char* lhs, char* rhs)
+{
+	/*int len = StrLen(lhs);
+
+	int i = 0;
+	while (rhs[i] != 0)
+	{
+		lhs[len + i] = rhs[i];
+		i++;
+	}
+
+	lhs[len + i] = 0;*/
+
+	char* ret = lhs;
+
+	while (*lhs != 0)
+		lhs++;
+
+	while (*rhs != 0)
+	{
+		*lhs = *rhs;
+		lhs++;
+		rhs++;
+	}
+
+	return ret;
 }
 
 int main()
 {
-	StatInfo player = CreatePlayer();
-	StatInfo monster;
-	CreateMonster(&monster);
+	const int BUF_SIZE = 100;
 
-	Battle(&player, &monster);
+	char aStr[BUF_SIZE] = "Hello";
+	char bStr[BUF_SIZE] = "World";
+
+	int len = StrLen(aStr);
+	cout << len << endl;
+
+#pragma warning(disable:4996)
+	char c[BUF_SIZE];
+	StrCpy(c, aStr);
+	cout << c << endl;
+
+
+	cout << StrCat(aStr, bStr) << endl;
 }
 
 
