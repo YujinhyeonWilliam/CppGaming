@@ -7,14 +7,41 @@ public:
 	void Attack();
 	void Die();
 	void Heal(int healValue);
+	virtual void Move();
+	virtual void Eat() abstract;
 	void PrintHP();
 
 	Player();
 	Player(const Player& other);
 	Player(int hp, int attack, int defence);
-	~Player();
+	virtual ~Player();
 private:
 	int _hp;
 	int _attack;
 	int _defence;
+};
+
+class Knight : public Player
+{
+public:
+	virtual void Move() override;
+	virtual void Eat() override;
+private:
+
+};
+
+class Archer : public Player
+{
+public:
+
+private:
+
+};
+
+class Mage : public Player
+{
+public:
+
+private:
+
 };

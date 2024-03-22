@@ -24,6 +24,22 @@ void Player::PrintHP()
 	std::cout << "Hp = " << this->_hp << std::endl;
 }
 
+
+void Player::Move()
+{
+	std::cout << " Player Move!" << std::endl;
+}
+
+void Knight::Move()
+{
+	std::cout << " Knight Move! " << std::endl;
+}
+
+void Knight::Eat()
+{
+	std::cout << " Knight Eat! " << std::endl;
+}
+
 #pragma endregion
 
 
@@ -43,7 +59,7 @@ Player::Player()
 	_hp = 100;
 	_attack = 10;
 	_defence = 50;
-	std::cout << "Player Constructor!" << std::endl;
+	//std::cout << "Player Constructor!" << std::endl;
 }
 
 Player::Player(int hp, int attack, int defence)
@@ -51,12 +67,12 @@ Player::Player(int hp, int attack, int defence)
 	_hp = hp;
 	_attack = attack;
 	_defence = defence;
-	std::cout << "Player Constructor!" << std::endl;
+	//std::cout << "Player Constructor!" << std::endl;
 }
 
 Player::~Player()
 {
-	std::cout << "Player Destructor!" << std::endl;
+	//std::cout << "Player Destructor!" << std::endl;
 }
 
 #pragma endregion

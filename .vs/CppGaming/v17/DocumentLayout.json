@@ -40,11 +40,15 @@
               "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
               "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T09:21:13.415Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -60,10 +64,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Player.h",
@@ -71,7 +71,7 @@
               "RelativeDocumentMoniker": "CppGaming\\Player.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.h",
               "RelativeToolTip": "CppGaming\\Player.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAUwBoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-22T08:07:51.797Z",
               "EditorCaption": ""
@@ -90,7 +90,7 @@
               "RelativeDocumentMoniker": "CppGaming\\Player.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.cpp",
               "RelativeToolTip": "CppGaming\\Player.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAACcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-22T08:07:55Z",
               "EditorCaption": ""

@@ -2,21 +2,16 @@
 #include "Player.h"
 using namespace std;
 
-void Fight(Player* k1, Player* k2)
-{
 
+void MovePlayer(Player* player)
+{
+	(*player).Move();
 }
 
 int main()
 {
-	Player p1{ 100, 30, 2 };
-	Player p2(p1);
-
-	p1.Heal(30);
-	p2.Heal(-10);
-
-	p1.PrintHP();
-	p2.PrintHP();
+	Knight k1;
+	MovePlayer(&k1);
 }
 
 
