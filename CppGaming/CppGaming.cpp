@@ -1,78 +1,58 @@
 #include <iostream>
 using namespace std;
 
-int StrLen(const char* str)
+struct StatInfo
 {
-	int count = 0;
+	int hp;
+	int attack;
+	int defence;
+};
 
-	while (str[count] != '\0')
-	{
-		count++;
-	}
 
-	return count;
+// 1. 값(복사) 전달 방식
+void PrintByCopy(StatInfo player)
+{
+	cout << "-------------" << endl;
+	cout << "HP : " << player.hp << endl;
+	cout << "ATT : " << player.attack << endl;
+	cout << "DEF : " << player.defence << endl;
+	cout << "-------------" << endl;
 }
 
-char* StrCpy(char* dest, char* src)
+ // 2. 주소 전달 방식
+void PrintByPointer(StatInfo* player)
 {
-	char* ret = dest;
-
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-
-	*dest = 0;
-	return ret;
+	cout << "-------------" << endl;
+	cout << "HP : " << player->hp << endl;
+	cout << "ATT : " << player->attack << endl;
+	cout << "DEF : " << player->defence << endl;
+	cout << "-------------" << endl;
 }
 
-char* StrCat(char* lhs, char* rhs)
+// 3) 참조 전달 방식 (원본 값을 유지하며, 복사비용을 아끼기 위해서 const 사용)
+
+// 아래와 같이 OUT 키워드를 넣으면 확실하게 이 함수 안에서 수정하는 코드가 있다는 것을 알려주는 암묵적 룰이 있다.
+// 언리얼 샘플 코드에서도 간혹 보이므로 이상한 코드 형태가 아님
+#define OUT
+void PrintByRef(OUT StatInfo& player)
 {
-	/*int len = StrLen(lhs);
+	player.hp = 0;
 
-	int i = 0;
-	while (rhs[i] != 0)
-	{
-		lhs[len + i] = rhs[i];
-		i++;
-	}
-
-	lhs[len + i] = 0;*/
-
-	char* ret = lhs;
-
-	while (*lhs != 0)
-		lhs++;
-
-	while (*rhs != 0)
-	{
-		*lhs = *rhs;
-		lhs++;
-		rhs++;
-	}
-
-	return ret;
+	cout << "-------------" << endl;
+	cout << "HP : " << player.hp << endl;
+	cout << "ATT : " << player.attack << endl;
+	cout << "DEF : " << player.defence << endl;
+	cout << "-------------" << endl;
 }
 
 int main()
 {
-	const int BUF_SIZE = 100;
+	StatInfo player = { 100, 10, 1 };
+	PrintByCopy(player);
 
-	char aStr[BUF_SIZE] = "Hello";
-	char bStr[BUF_SIZE] = "World";
-
-	int len = StrLen(aStr);
-	cout << len << endl;
-
-#pragma warning(disable:4996)
-	char c[BUF_SIZE];
-	StrCpy(c, aStr);
-	cout << c << endl;
-
-
-	cout << StrCat(aStr, bStr) << endl;
+	StatInfo* ptr = nullptr;
+	PrintByPointer(&player);
+	PrintByRef(OUT player);
 }
 
 
