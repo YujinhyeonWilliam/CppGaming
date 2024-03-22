@@ -20,12 +20,26 @@ private:
 
 #define GET_USER_MANAGER (UserManager::GetInstance())
 
+class Object
+{
+
+};
+
+class IFly
+{
+	virtual void Fly() abstract;
+	virtual void Land() abstract;
+};
+
+class Player : public Object, public IFly
+{
+	virtual void Fly() override {}
+	virtual void Land() override {}
+};
+
 int main()
 {
-	for(int i=0; i<5; i++)
-		GET_USER_MANAGER->AddUser();
 
-	cout << GET_USER_MANAGER->GetUserCount() << endl;
 
 }
 
