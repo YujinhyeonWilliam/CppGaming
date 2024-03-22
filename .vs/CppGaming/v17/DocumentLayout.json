@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
               "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T09:21:13.415Z",
               "IsPinned": true,
@@ -60,8 +60,7 @@
               "RelativeToolTip": "CppGaming\\Helper.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-22T10:37:02.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T10:37:02.549Z"
             },
             {
               "$type": "Document",
@@ -73,8 +72,7 @@
               "RelativeToolTip": "CppGaming\\Player.h",
               "ViewState": "AQIAAAYAAAAAAAAAAAAUwB4AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-22T08:07:51.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T08:07:51.797Z"
             }
           ]
         },
@@ -90,7 +88,7 @@
               "RelativeDocumentMoniker": "CppGaming\\Player.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\Player.cpp",
               "RelativeToolTip": "CppGaming\\Player.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-22T08:07:55Z",
               "EditorCaption": ""
@@ -105,8 +103,7 @@
               "RelativeToolTip": "CppGaming\\Helper.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T12:05:51.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T12:05:51.683Z"
             }
           ]
         }
