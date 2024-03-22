@@ -1,65 +1,87 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-// 로또 번호 생성기
-void Swap(int& a, int& b)
-{
-	int temp = a;
-	a = b;
-	b = temp;
-}
+const int MAX = 100;
+int board[MAX][MAX];
+int N;
 
-void BubbleSort(int* numbers, int length)
+void PrintBoard()
 {
-	for (int i = 0; i < length; i++)
+	for (int y = 0; y < N; y++)
 	{
-		for (int j = 0; j < length - 1 - i; j++)
+		for (int x = 0; x < N; x++)
 		{
-			if (numbers[j] > numbers[j + 1])
-			{
-				Swap(numbers[j], numbers[j + 1]);
-			}
+			cout << setfill('0') << setw(2) << board[y][x] << " ";
 		}
+
+		cout << endl;
 	}
 }
 
-void ChooseLotto(int* numbers)
+enum DIR
 {
-	int count = 0;
+	RIGHT = 0,
+	DOWN = 1,
+	LEFT = 2,
+	UP = 3,
+};
 
-	while (count != 6)
+bool CanGo(int y, int x)
+{
+	if (y < 0 || y >= N)
+		return false;
+	if (x < 0 || x >= N)
+		return false;
+	if (board[y][x] != 0)
+		return false;
+
+	return true;
+}
+
+void SetBoard()
+{
+	int dir = RIGHT;
+	int num = 1;
+	int y = 0;
+	int x = 0;
+
+	int dy[] = { 0, 1, 0, -1 };
+	int dx[] = { 1, 0, -1, 0 };
+
+	while (true)
 	{
-		// 1 ~ 45
-		int randValue = 1 + rand() % 45;
+		board[y][x] = num;
 
-		bool found = false;
-		for (int i = 0; i < count; i++)
+		if (num == N * N)
+			break;
+
+		int nextY;
+		int nextX;
+
+		nextY = y + dy[dir];
+		nextX = x + dx[dir];
+
+		if (!CanGo(nextY, nextX))
 		{
-			if (numbers[i] == randValue)
-			{
-				found = true;
-				break;
-			}
+			dir = (dir + 1) % 4;
+			continue;
+		}
+		else
+		{
+			y = nextY;
+			x = nextX;
+			num++;
 		}
 
-		if (found == false)
-		{
- 		   numbers[count] = randValue;
-  		   count++;
-		}
 	}
-
-	BubbleSort(numbers, 6);
 }
 
 int main()
 {
-	srand((unsigned int)time(0));
-	int lotto[6];
-	ChooseLotto(lotto);
-
-	for (int i = 0; i < 6; i++)
-		cout << lotto[i] << endl;
+	cin >> N;
+	SetBoard();
+	PrintBoard();
 }
 
 
