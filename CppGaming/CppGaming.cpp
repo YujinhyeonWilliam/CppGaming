@@ -1,81 +1,34 @@
 #include <iostream>
-//#include "Player.h"
 using namespace std;
 
-class Player
+class Node
 {
 public:
-	Player() {};
-	virtual ~Player(){}
-};
+	Node(int data) : _data(data) {}
 
-class Knight : public Player
-{
 public:
-	Knight() {};
-	virtual ~Knight(){}
-};
-
-class Archer : public Player
-{
-public:
-	Archer() {};
-	virtual ~Archer() {}
-};
-
-class Dog
-{
-
+	int _data;
+	Node* _prev = nullptr;
+	Node* _next = nullptr;
 };
 
 int main()
 {
-	// static_cast
-	int hp = 100;
-	int maxHp = 200;
-	float ratio = static_cast<float>(hp / maxHp);
+	Node* n1 = new Node(1);
+	Node* n2 = new Node(2);
+	Node* n3 = new Node(3);
+	Node* n4 = new Node(4);
+	Node* n5 = new Node(5);
 
-	// dynamic_cast
-	Archer* k = new Archer();
-	Player* p = k;
-	Knight* k3 = dynamic_cast<Knight*>(p);
+	n1->_next = n2;
+	n2->_prev = n1;
+	n2->_next = n3;
+	n3->_prev = n2;
+	n3->_next = n4;
+	n4->_prev = n3;
+	n4->_next = n5;
+	n5->_prev = n4;
 
-	// const_cast
-	const char* name = "Jinhyeon";
-	char* name2 = const_cast<char*>(name);
-
-	// reinterpret_cast
-	Dog* dog = reinterpret_cast<Dog*>(p);
-	__int64 address = reinterpret_cast<__int64>(k3);
+	Node* head = n1;
+	Node* tail = n5;
 }
-
-
-/*
-
-#include <iostream>
-using namespace std;
-#include "Helper.h"
-#include "Map.h"
-#include "Player.h"
-
-
-[Map and Player Move]
-
-int main()
-{
-	SetCursorOnOff(false);
-
-	while (true)
-	{
-		// 입력
-		HandleKeyInput();
-
-		// 출력
-		HandleMove();
-
-		// 로직
-		PrintMap2D();
-	}
-}
-
-*/
