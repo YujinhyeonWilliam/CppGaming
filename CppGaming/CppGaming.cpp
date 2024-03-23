@@ -2,44 +2,37 @@
 #include "Player.h"
 using namespace std;
 
-class UserManager
+class Monster
 {
 public:
-	static UserManager* GetInstance()
-	{
-		static UserManager um;
-		return &um;
-	}
+	Monster() { cout << "Monster()" << endl; }
+	~Monster() { cout << "~Monster()" << endl;  }
+	int _hp = 0;
 
-public:
-	void AddUser() { _userCount++; }
-	int GetUserCount() { return _userCount++; }
-private:
-	int _userCount = 0;
 };
 
-#define GET_USER_MANAGER (UserManager::GetInstance())
 
-class Object
+Player* FindPlayer(int id)
 {
+	//TODO
 
-};
-
-class IFly
-{
-	virtual void Fly() abstract;
-	virtual void Land() abstract;
-};
-
-class Player : public Object, public IFly
-{
-	virtual void Fly() override {}
-	virtual void Land() override {}
-};
+	return nullptr;
+}
 
 int main()
 {
+	// (1) malloc + free  (C방식)
+	// (2) new + delete (C++방식) 
 
+	// (1)과 (2)의
+	//  차이1. (1)은 함수 (2)는 연산자 
+	//  차이2. (1)은 메모리만 할당해주고 (2)는 생성자 및 소멸자를 호출해준다.
+	//  그래서 C++, 언리얼 작업에선 주로 new와 delete를 사용한다
+
+	 Monster* m1 = new Monster[5]();
+	 m1->_hp = 10;
+	 delete[] m1;
+	 m1 = nullptr;
 
 }
 
