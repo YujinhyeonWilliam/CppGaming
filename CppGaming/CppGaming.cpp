@@ -1,53 +1,52 @@
 #include <iostream>
-#include "Player.h"
+//#include "Player.h"
 using namespace std;
 
-class Pet
+class Player
 {
 public:
-	Pet() { cout << "Pet()" << endl; }
-	~Pet() { cout << "~Pet()" << endl; }
-
-	Pet(const Pet& pet) { cout << "Pet(const Pet& pet) called" << endl; }
+	Player() {};
+	virtual ~Player(){}
 };
 
-class Monster
+class Knight : public Player
 {
 public:
-	Monster()
-	{
-		cout << "Monster() called" << endl;
-		_pet = new Pet();
-	}
-	~Monster()
-	{
-		cout << "~Monster() called" << endl;
-		delete _pet;
-		_pet = nullptr;
-	}
-	
-	 Monster(const Monster& k)
-	 {
-	 	_hp = k._hp;
-		_pet = new Pet(*k._pet);
-	 	cout << "Monster(const Monster& k) called" << endl;
-	 }
-	 
-	 void operator=(const Monster& k)
-	 {
-	 	_hp = k._hp;
-	 }
+	Knight() {};
+	virtual ~Knight(){}
+};
 
+class Archer : public Player
+{
 public:
-	int _hp = 100;
-	Pet* _pet;
+	Archer() {};
+	virtual ~Archer() {}
+};
+
+class Dog
+{
+
 };
 
 int main()
 {
-	Monster m1;
-	m1._hp = 200;
-	Monster m2 = m1;
+	// static_cast
+	int hp = 100;
+	int maxHp = 200;
+	float ratio = static_cast<float>(hp / maxHp);
+
+	// dynamic_cast
+	Archer* k = new Archer();
+	Player* p = k;
+	Knight* k3 = dynamic_cast<Knight*>(p);
+
+	// const_cast
+	const char* name = "Jinhyeon";
+	char* name2 = const_cast<char*>(name);
+
+	// reinterpret_cast
+	Dog* dog = reinterpret_cast<Dog*>(p);
+	__int64 address = reinterpret_cast<__int64>(k3);
 }
 
 
