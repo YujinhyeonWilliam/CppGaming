@@ -1,2 +1,9 @@
-﻿  RPGGame.cpp
+﻿  Inventory.cpp
+C:\CppProjects\CppGaming\RPGGame\Inventory.cpp(55,4): warning C4150: 불완전한 형식 'Item'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+  C:\CppProjects\CppGaming\RPGGame\Inventory.h(8,7):
+  'Item' 선언을 참조하십시오.
+  
+  Item.cpp
+  RPGGame.cpp
+  코드를 생성하고 있습니다...
   RPGGame.vcxproj -> C:\CppProjects\CppGaming\x64\Debug\RPGGame.exe

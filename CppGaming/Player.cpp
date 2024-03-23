@@ -72,7 +72,8 @@ Player::Player(int hp, int attack, int defence)
 
 Player::~Player()
 {
-	//std::cout << "Player Destructor!" << std::endl;
+	std::cout << "Player Destructor!" << std::endl;
 }
 
 #pragma endregion
+

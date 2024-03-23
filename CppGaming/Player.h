@@ -1,5 +1,6 @@
 #pragma once
 
+
 class Player
 {
 public:
@@ -34,14 +35,6 @@ private:
 
 };
 
-class Archer : public Player
-{
-public:
-
-private:
-
-};
-
 class Mage : public Player
 {
 public:
@@ -49,3 +42,4 @@ public:
 private:
 
 };
+
