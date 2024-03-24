@@ -8,6 +8,9 @@
     <Filter Include="Data Structure">
       <UniqueIdentifier>{57daa41b-0bec-4904-a5d0-5fea4a15b7ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Board">
+      <UniqueIdentifier>{f69fbb14-5d25-4404-988c-599328c49719}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Maze.cpp">
@@ -22,6 +25,18 @@
     <ClCompile Include="Vector.cpp">
       <Filter>Data Structure</Filter>
     </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Board</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleHelper.cpp">
+      <Filter>Board</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Board</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -32,6 +47,21 @@
     </ClInclude>
     <ClInclude Include="Vector.h">
       <Filter>Data Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Board</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleHelper.h">
+      <Filter>Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Board</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

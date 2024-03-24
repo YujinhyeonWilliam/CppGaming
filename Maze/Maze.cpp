@@ -1,17 +1,33 @@
-﻿#include <iostream>
+﻿#include "pch.h"
 #include "Vector.h"
+#include "Board.h"
+#include "Player.h"
+
+Board board;
+Player player;
 
 int main()
 {
-	Vector v;
-	v.push_back(1);
-	v.push_back(2);
-	v.push_back(3);
-	int a = v[2];
+	::srand(static_cast<uint32>(time(nullptr)));
+	board.Init(25, &player);
+	player.Init(&board);
 
-	v.pop_back();
-	v.pop_back();
-	v.clear();
-	v.push_back(6);
+	uint64 lastTick = 0;
+	while (true)
+	{
 
+		#pragma region 프레임 관리
+		const uint64 currentTick = ::GetTickCount64();
+		const uint64 deltaTick = currentTick - lastTick;
+		lastTick = currentTick;
+		#pragma endregion
+
+		// TODO: 입력
+
+		// TODO: 로직
+		player.Update(deltaTick);
+
+		// TODO: 렌더링
+		board.Render();
+	}
 }
