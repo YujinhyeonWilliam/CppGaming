@@ -1,14 +1,17 @@
 ﻿#include <iostream>
-#include "List.h"
+#include "Vector.h"
 
 int main()
 {
-    List li;
-    li.AddAtTail(1);
-    Node* node = li.AddAtTail(2);
-    li.AddAtTail(3);
-    li.Print();
-    cout << " ====== After Remove ====" << endl;
-    li.Remove(node);
-    li.Print();
+	Vector v;
+	v.push_back(1);
+	v.push_back(2);
+	v.push_back(3);
+	int a = v[2];
+
+	v.pop_back();
+	v.pop_back();
+	v.clear();
+	v.push_back(6);
+
 }

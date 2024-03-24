@@ -16,9 +16,21 @@
     <ClCompile Include="List.cpp">
       <Filter>Data Structure</Filter>
     </ClCompile>
+    <ClCompile Include="Array.cpp">
+      <Filter>Data Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Data Structure</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
+      <Filter>Data Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>Data Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
       <Filter>Data Structure</Filter>
     </ClInclude>
   </ItemGroup>
