@@ -73,10 +73,23 @@ public:
 		_buffer = newData;
 	}
 
+	void resize(int size)
+	{
+		//TODO
+		reserve(size);
+		_size = size;
+
+	}
+
 	T& operator[](int index)
 	{
 		assert(index >= 0 && index < _size);
 		return _buffer[index];
+	}
+
+	T& back()
+	{
+		return _buffer[_size - 1];
 	}
 
 	int size() { return _size; }

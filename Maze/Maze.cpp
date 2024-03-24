@@ -5,9 +5,11 @@
 
 Board board;
 Player player;
+#include "Stack.h"
 
 int main()
 {
+
 	::srand(static_cast<uint32>(time(nullptr)));
 	board.Init(25, &player);
 	player.Init(&board);

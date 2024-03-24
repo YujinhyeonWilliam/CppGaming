@@ -5,4 +5,6 @@ C:\CppProjects\CppGaming\Maze\List.cpp;C:\CppProjects\CppGaming\Maze\x64\Debug\L
 C:\CppProjects\CppGaming\Maze\Maze.cpp;C:\CppProjects\CppGaming\Maze\x64\Debug\Maze.obj
 C:\CppProjects\CppGaming\Maze\pch.cpp;C:\CppProjects\CppGaming\Maze\x64\Debug\pch.obj
 C:\CppProjects\CppGaming\Maze\Player.cpp;C:\CppProjects\CppGaming\Maze\x64\Debug\Player.obj
+C:\CppProjects\CppGaming\Maze\Queue.cpp;C:\CppProjects\CppGaming\Maze\x64\Debug\Queue.obj
+C:\CppProjects\CppGaming\Maze\Stack.cpp;C:\CppProjects\CppGaming\Maze\x64\Debug\Stack.obj
 C:\CppProjects\CppGaming\Maze\Vector.cpp;C:\CppProjects\CppGaming\Maze\x64\Debug\Vector.obj
