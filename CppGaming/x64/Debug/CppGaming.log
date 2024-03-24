@@ -1,5 +1,2 @@
 ﻿  CppGaming.cpp
-C:\CppProjects\CppGaming\CppGaming\CppGaming.cpp(20,22): warning C4101: 'rb1' :참조되지 않은 지역 변수입니다.
-C:\CppProjects\CppGaming\CppGaming\CppGaming.cpp(22,24): warning C4101: 'rb3' :참조되지 않은 지역 변수입니다.
-C:\CppProjects\CppGaming\CppGaming\CppGaming.cpp(21,23): warning C4101: 'rb2' :참조되지 않은 지역 변수입니다.
   CppGaming.vcxproj -> C:\CppProjects\CppGaming\x64\Debug\CppGaming.exe
