@@ -1,10 +1,9 @@
 #pragma once
 #include "assert.h"
 
+template<typename T>
 class Array
 {
-	using T = int;
-
 public:
 	explicit Array(int capacity = 100) : _capacity(capacity)
 	{

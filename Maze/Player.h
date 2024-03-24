@@ -25,7 +25,7 @@ private:
 	int32	_dir = DIR_UP;
 	Board*  _board = nullptr;
 
-	Vector	_path;
+	Vector<Pos>	_path;
 	int32	_pathIndex = 0;
 	uint64	_sumTick = 0;
 };

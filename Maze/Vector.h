@@ -2,10 +2,9 @@
 #include "assert.h"
 #include "stdexcept"
 
+template<typename T>
 class Vector
 {
-	using T = Pos;
-
 public:
 	explicit Vector()
 	{

@@ -1,34 +1,24 @@
 #include <iostream>
 using namespace std;
 
-class Node
+template<typename T = int, int SIZE = 100>
+class RandomBox
 {
 public:
-	Node(int data) : _data(data) {}
+	T GetRandomData()
+	{
+		int index = rand() % SIZE;
+		return data[index];
+	}
 
 public:
-	int _data;
-	Node* _prev = nullptr;
-	Node* _next = nullptr;
+	T data[SIZE];
 };
 
 int main()
 {
-	Node* n1 = new Node(1);
-	Node* n2 = new Node(2);
-	Node* n3 = new Node(3);
-	Node* n4 = new Node(4);
-	Node* n5 = new Node(5);
+	RandomBox<int, 100> rb1;
+	RandomBox<float, 40> rb2;
+	RandomBox<double, 20> rb3;
 
-	n1->_next = n2;
-	n2->_prev = n1;
-	n2->_next = n3;
-	n3->_prev = n2;
-	n3->_next = n4;
-	n4->_prev = n3;
-	n4->_next = n5;
-	n5->_prev = n4;
-
-	Node* head = n1;
-	Node* tail = n5;
 }

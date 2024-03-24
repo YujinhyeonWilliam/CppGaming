@@ -73,5 +73,4 @@ void Player::Update(uint64 deltaTick)
 		_pathIndex++;
 		_sumTick = 0;
 	}
-
 }
