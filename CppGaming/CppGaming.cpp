@@ -11,102 +11,94 @@ struct Vertex
 vector<Vertex> vertices;
 vector<vector<int>> adjacent;
 
-//내가 방문한 목록
-vector<bool> visited;
-
-// 발견한
-vector<bool> discovered;
-
 void CreateGraph()
 {
 	vertices.resize(6);
-
-	// 인접 리스트
-	adjacent = vector<vector<int>>(6);
-	adjacent[0] = { 1, 3 };
-	adjacent[1] = { 0, 2, 3 };
-	adjacent[3] = { 4 };
-	adjacent[5] = { 4 };
-
-	// 인접 행렬
-	adjacent = vector<vector<int>>
-	{
-		{0, 1, 0, 1, 0, 0},
-		{1, 0, 1, 1, 0, 0},
-		{0, 0, 0, 0, 0, 0},
-		{0, 0, 0, 0, 1, 0},
-		{0, 0, 0, 0, 0, 0},
-		{0, 0, 0, 0, 1, 0},
-	};
+	adjacent = vector<vector<int>>(6, vector<int>(6, -1));
+	adjacent[0][1] = adjacent[1][0] = 15;
+	adjacent[0][3] = adjacent[3][0] = 35;
+	adjacent[1][2] = adjacent[2][1] = 5;
+	adjacent[1][3] = adjacent[3][1] = 10;
+	adjacent[3][4] = adjacent[4][3] = 5;
+	adjacent[5][4] = adjacent[4][5] = 5;
 
 }
 
-
-void BFS(int now)
+struct VertexCost
 {
-	// ex) 누구에 의해서 발견되었는가
+	VertexCost(int cost, int vertex) : cost(cost), vertex(vertex) {}
+	int cost;
+	int vertex;
+
+	bool operator<(const VertexCost& other) const
+	{
+		return cost < other.cost;
+	}
+
+	bool operator>(const VertexCost& other) const
+	{
+		return cost > other.cost;
+	}
+
+	bool operator==(const VertexCost& other) const
+	{
+		return cost == other.cost;
+	}
+
+	bool operator!=(const VertexCost& other) const
+	{
+		return !(cost == other.cost);
+	}
+
+};
+
+// Dijikstra = BFS + 양념(cost)
+// - BFS : Queue
+// - Dijikstra = Priority Queue
+
+void Dijikstra(int now)
+{
+	priority_queue<VertexCost, vector<VertexCost>, greater<VertexCost>> pq;
+	vector<int> best(6, INT32_MAX);
 	vector<int> parent(6, -1);
 
-	// ex) 시작점에서 얼만큼 떨어져 있는가?
-	vector<int> dist(6, -1);
-	queue<int> q;
-	q.push(now);
-
-	discovered[now] = true;
+	pq.push(VertexCost(0, now));
+	best[now] = 0;
 	parent[now] = now;
-	dist[now] = 0;
 
-	while (q.empty() == false)
+	while (pq.empty() == false)
 	{
-		now = q.front();
-		q.pop();
+		VertexCost v = pq.top();
+		pq.pop();
 
-		// 방문 도장
-		cout << "Visited : " << now << endl;
+		int cost = v.cost;
+		now = v.vertex;
 
-		// 인접행렬
+		if (best[now] < cost)
+			continue;
+		
+		cout << "방문!: " << now << endl;
+
 		for (int dest = 0; dest < 6; dest++)
 		{
-			if (adjacent[now][dest] == false)
+			if (adjacent[now][dest] == -1)
 				continue;
 
-			if (discovered[dest])
+			// 더 좋은 경로를 과거에 찾았으면 스킵
+			int nextCost = best[now] + adjacent[now][dest];
+			if (nextCost >= best[dest])
 				continue;
 
-			q.push(dest);
-			discovered[dest] = true;
-
-			parent[dest] = now;
-			dist[dest] = dist[now] + 1;
+			// 지금까지 찾은 최선의 수치
+			best[dest] = nextCost;
+			parent[dest] = now; // 나중에 갱신 가능
+			pq.push(VertexCost(nextCost, dest));
 		}
-
-		// 인접리스트
-		//int size = static_cast<int>(adjacent[now].size());
-		//for(int i=0; i<size; i++)
-		//{
-		//	int dest = adjacent[now][i];
-		//	if (discovered[dest])
-		//		continue;
-
-		//	q.push(dest);
-		//	discovered[dest] = true;
-		//}
 	}
-}
-
-
-void BFSALL()
-{
-	discovered = vector<bool>(6, false);
-	for (int i = 0; i < 6; i++)
-		if (discovered[i] == false)
-			BFS(i);
 }
 
 int main()
 {
 	CreateGraph();
-	// discovered = vector<bool>(6, false);
-	// BFS(0);
-	BFSALL();
+	Dijikstra(0);
 }
