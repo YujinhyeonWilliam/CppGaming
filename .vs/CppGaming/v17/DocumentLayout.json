@@ -93,7 +93,7 @@
       "VerticalTabListWidth": 210,
       "DocumentGroups": [
         {
-          "DockedWidth": 280,
+          "DockedWidth": 226,
           "SelectedChildIndex": 6,
           "Children": [
             {
@@ -178,7 +178,7 @@
               "RelativeDocumentMoniker": "Maze\\pch.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\pch.h",
               "RelativeToolTip": "Maze\\pch.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-24T05:33:24.151Z",
               "EditorCaption": ""
@@ -222,7 +222,7 @@
           ]
         },
         {
-          "DockedWidth": 304,
+          "DockedWidth": 358,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -233,7 +233,7 @@
               "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
               "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
               "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAAGkAAAARAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAUwGkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-24T10:58:13.794Z",
               "IsPinned": true,

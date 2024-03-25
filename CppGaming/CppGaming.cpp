@@ -1,108 +1,113 @@
 #include <iostream>
 using namespace std;
 #include <vector>
+#include <queue>
 
-class Node
+template<typename T, typename Predicate = less<T>>
+class PriorityQueue
 {
 public:
-	Node(const char* data) : data(data) {}
-public:
-	const char*	  data;
-	vector<Node*> children;
+	// O(logN)
+	void push(const T& data)
+	{
+		// 법칙2: 우선 힙 구조부터 맞춰준다.
+		_heap.push_back(data);
+
+		// 법칙1: 부모 노드는 항상 자식 노드보다 큰 값을 가진다.
+		int now = static_cast<int>(_heap.size()) - 1;
+		while (now > 0)
+		{
+			int next = parent(now);
+
+		  //if (_heap[now] < _heap[next])
+			if(_predicate(_heap[now], _heap[next]))
+				break;
+
+			::swap(_heap[now], _heap[next]);
+			now = next;
+		}
+	}
+
+	// O(logN)
+	void pop()
+	{
+		_heap[0] = _heap.back();
+		_heap.pop_back();
+
+		int now = 0;
+		int heapSize = static_cast<int>(_heap.size());
+		while (true)
+		{
+			int left = leftChild(now);
+			int right = rightChild(now);
+
+			// 리프에 도달한 경우
+			if (left >= heapSize)
+				break;
+
+			int next = now;
+			if (_heap[now] < _heap[left])
+				next = left;
+			
+			//if (right < heapSize && _heap[next] < _heap[right])
+			if (right < heapSize && _predicate(_heap[next], _heap[right]))
+				next = right;
+
+			if (next == now)
+				break;
+			else
+			{
+				::swap(_heap[now], _heap[next]);
+				now = next;
+			}
+		}
+	}
+
+	// O(1)
+	T& top()
+	{
+		return _heap[0];
+	}
+
+	// O(1)
+	bool empty()
+	{
+		return _heap.empty();
+	}
+
+private: 
+	// O(1)
+	int leftChild(int index)
+	{
+		return index * 2 + 1;
+	}
+
+	// O(1)
+	int rightChild(int index)
+	{
+		return index * 2 + 2;
+	}
+
+	// O(1)
+	int parent(int index)
+	{
+		return (index - 1) / 2;
+	}
+
+private:
+	vector<T> _heap;
+	Predicate _predicate;
 };
-
-Node* CreateTree()
-{
-	Node* root = new Node("R1 개발실");
-
-	{
-		Node* node = new Node("디자인 팀");
-		root->children.push_back(node);
-		{
-			Node* leaf = new Node("전투");
-			node->children.push_back(leaf);
-		}
-		{
-			Node* leaf = new Node("경제");
-			node->children.push_back(leaf);
-		}
-		{
-			Node* leaf = new Node("스토리");
-			node->children.push_back(leaf);
-		}
-	}
-
-	{
-		Node* node = new Node("프로그래밍 팀");
-		root->children.push_back(node);
-		{
-			Node* leaf = new Node("클라");
-			node->children.push_back(leaf);
-		}
-		{
-			Node* leaf = new Node("서버");
-			node->children.push_back(leaf);
-		}
-		{
-			Node* leaf = new Node("엔진");
-			node->children.push_back(leaf);
-		}
-	}
-
-	{
-		Node* node = new Node("아트 팀");
-		root->children.push_back(node);
-		{
-			Node* leaf = new Node("배경");
-			node->children.push_back(leaf);
-		}
-		{
-			Node* leaf = new Node("캐릭터");
-			node->children.push_back(leaf);
-		}
-	}
-
-	return root;
-}
-
-void PrintTree(Node* root, int depth = 0)
-{
-	for (int i = 0; i < depth; i++)
-	{
-		cout << "|";
-		if (i == depth - 1)
-			cout << "-";
-	}
-
-	cout << root->data << endl;
-
-	int size = root->children.size();
-	for (int i = 0; i < size; i++)
-	{
-		Node* node = root->children[i];
-		PrintTree(node, depth+1);
-	}
-}
-
-int GetHeight(Node* root)
-{
-	int ret = 1;
-	int size = root->children.size();
-	for (int i = 0; i < size; i++)
-	{
-		Node* node = root->children[i];
-		int h = GetHeight(node) + 1;
-
-		if (ret < h)
-			ret = h;
-	}
-
-	return ret;
-}
 
 int main()
 {
-	Node* root = CreateTree();
-	PrintTree(root);
-	cout << endl << GetHeight(root) << endl;
+	PriorityQueue<int, greater<int>> pq;
+	pq.push(10);
+	pq.push(40);
+	pq.push(30);
+	pq.push(50);
+	pq.push(20);
+	int value = pq.top();
+	pq.pop();
+	cout << " Top = " << value << endl;
 }
