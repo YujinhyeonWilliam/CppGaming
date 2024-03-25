@@ -3,84 +3,80 @@
   "WorkspaceRootPath": "C:\\CppProjects\\CppGaming\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BDD419A5-F5ED-448C-A4E7-E5077B8216A1}|CppGaming\\CppGaming.vcxproj|solutionrelative:CppGaming\\CppGaming.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Maze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Maze.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Stack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Stack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\ConsoleHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\ConsoleHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Queue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Queue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\ConsoleHelper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\ConsoleHelper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Stack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Stack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\ConsoleHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\ConsoleHelper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Queue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Queue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\ConsoleHelper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\ConsoleHelper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|solutionrelative:Maze\\Array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDDD5BFF-4758-4872-B7EF-FBF593415513}|Maze\\Maze.vcxproj|C:\\CppProjects\\CppGaming\\Maze\\Vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -94,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 226,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -107,36 +103,40 @@
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-24T10:32:29.276Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "Stack.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Stack.h",
               "RelativeDocumentMoniker": "Maze\\Stack.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\Stack.h",
               "RelativeToolTip": "Maze\\Stack.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-24T10:32:23.434Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Player.h",
               "RelativeDocumentMoniker": "Maze\\Player.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\Player.h",
               "RelativeToolTip": "Maze\\Player.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-24T05:40:24.822Z"
+              "WhenOpened": "2024-03-24T05:40:24.822Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ConsoleHelper.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\ConsoleHelper.h",
               "RelativeDocumentMoniker": "Maze\\ConsoleHelper.h",
@@ -148,19 +148,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "Board.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Board.h",
               "RelativeDocumentMoniker": "Maze\\Board.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\Board.h",
               "RelativeToolTip": "Maze\\Board.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-24T05:39:32.975Z"
+              "WhenOpened": "2024-03-24T05:39:32.975Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Types.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Types.h",
               "RelativeDocumentMoniker": "Maze\\Types.h",
@@ -172,20 +173,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "pch.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\pch.h",
               "RelativeDocumentMoniker": "Maze\\pch.h",
               "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\pch.h",
               "RelativeToolTip": "Maze\\pch.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-24T05:33:24.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Vector.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Vector.h",
               "RelativeDocumentMoniker": "Maze\\Vector.h",
@@ -197,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "List.h",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\List.h",
               "RelativeDocumentMoniker": "Maze\\List.h",
@@ -223,25 +224,39 @@
         },
         {
           "DockedWidth": 358,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CppGaming.cpp",
-              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
-              "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
-              "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
-              "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGMAAAAKAAAA",
+              "DocumentIndex": 1,
+              "Title": "Maze.cpp",
+              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Maze.cpp",
+              "RelativeDocumentMoniker": "Maze\\Maze.cpp",
+              "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\Maze.cpp",
+              "RelativeToolTip": "Maze\\Maze.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T10:58:13.794Z",
+              "WhenOpened": "2024-03-23T11:16:30.626Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Player.cpp",
+              "RelativeDocumentMoniker": "Maze\\Player.cpp",
+              "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\Player.cpp",
+              "RelativeToolTip": "Maze\\Player.cpp",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAHoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-24T05:40:29.145Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Stack.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Stack.cpp",
               "RelativeDocumentMoniker": "Maze\\Stack.cpp",
@@ -249,11 +264,12 @@
               "RelativeToolTip": "Maze\\Stack.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T10:32:38.949Z"
+              "WhenOpened": "2024-03-24T10:32:38.949Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Queue.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Queue.cpp",
               "RelativeDocumentMoniker": "Maze\\Queue.cpp",
@@ -265,31 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Maze.cpp",
-              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Maze.cpp",
-              "RelativeDocumentMoniker": "Maze\\Maze.cpp",
-              "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\Maze.cpp",
-              "RelativeToolTip": "Maze\\Maze.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-23T11:16:30.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Player.cpp",
-              "RelativeDocumentMoniker": "Maze\\Player.cpp",
-              "ToolTip": "C:\\CppProjects\\CppGaming\\Maze\\Player.cpp",
-              "RelativeToolTip": "Maze\\Player.cpp",
-              "ViewState": "AQIAABsAAAAAAAAAAAAUwCsAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T05:40:29.145Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Board.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Board.cpp",
               "RelativeDocumentMoniker": "Maze\\Board.cpp",
@@ -297,11 +289,12 @@
               "RelativeToolTip": "Maze\\Board.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T05:39:45.667Z"
+              "WhenOpened": "2024-03-24T05:39:45.667Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ConsoleHelper.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\ConsoleHelper.cpp",
               "RelativeDocumentMoniker": "Maze\\ConsoleHelper.cpp",
@@ -309,11 +302,12 @@
               "RelativeToolTip": "Maze\\ConsoleHelper.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T05:40:04.379Z"
+              "WhenOpened": "2024-03-24T05:40:04.379Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "pch.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\pch.cpp",
               "RelativeDocumentMoniker": "Maze\\pch.cpp",
@@ -321,11 +315,12 @@
               "RelativeToolTip": "Maze\\pch.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-24T05:33:26.286Z"
+              "WhenOpened": "2024-03-24T05:33:26.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "Vector.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Vector.cpp",
               "RelativeDocumentMoniker": "Maze\\Vector.cpp",
@@ -337,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Array.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\Array.cpp",
               "RelativeDocumentMoniker": "Maze\\Array.cpp",
@@ -349,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 10,
               "Title": "List.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\Maze\\List.cpp",
               "RelativeDocumentMoniker": "Maze\\List.cpp",
@@ -357,7 +352,8 @@
               "RelativeToolTip": "Maze\\List.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-23T11:18:08.329Z"
+              "WhenOpened": "2024-03-23T11:18:08.329Z",
+              "EditorCaption": ""
             }
           ]
         }

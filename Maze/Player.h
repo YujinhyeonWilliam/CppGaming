@@ -1,5 +1,5 @@
 #pragma once
-#include "Vector.h"
+
 class Board;
 
 class Player
@@ -18,14 +18,14 @@ public:
 
 	bool	CanGo(Pos pos);
 private:
-	void	CalculatePath();
-
+	void	CalculatePath_RightHand();
+	void	CalculatePath_BFS();
 private:
 	Pos		_pos;
 	int32	_dir = DIR_UP;
 	Board*  _board = nullptr;
 
-	Vector<Pos>	_path;
+	vector<Pos>	_path;
 	int32	_pathIndex = 0;
 	uint64	_sumTick = 0;
 };
