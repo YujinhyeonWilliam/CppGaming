@@ -1,32 +1,108 @@
 #include <iostream>
 using namespace std;
+#include <vector>
 
-// Vector/List -> Tree -> Graph -> BFS -> Dijikstra -> A* (PQ)
-
-int Factorial(int n)
+class Node
 {
-	if (n <= 1)
-		return 1;
+public:
+	Node(const char* data) : data(data) {}
+public:
+	const char*	  data;
+	vector<Node*> children;
+};
 
-	return n * Factorial(n - 1);
+Node* CreateTree()
+{
+	Node* root = new Node("R1 개발실");
+
+	{
+		Node* node = new Node("디자인 팀");
+		root->children.push_back(node);
+		{
+			Node* leaf = new Node("전투");
+			node->children.push_back(leaf);
+		}
+		{
+			Node* leaf = new Node("경제");
+			node->children.push_back(leaf);
+		}
+		{
+			Node* leaf = new Node("스토리");
+			node->children.push_back(leaf);
+		}
+	}
+
+	{
+		Node* node = new Node("프로그래밍 팀");
+		root->children.push_back(node);
+		{
+			Node* leaf = new Node("클라");
+			node->children.push_back(leaf);
+		}
+		{
+			Node* leaf = new Node("서버");
+			node->children.push_back(leaf);
+		}
+		{
+			Node* leaf = new Node("엔진");
+			node->children.push_back(leaf);
+		}
+	}
+
+	{
+		Node* node = new Node("아트 팀");
+		root->children.push_back(node);
+		{
+			Node* leaf = new Node("배경");
+			node->children.push_back(leaf);
+		}
+		{
+			Node* leaf = new Node("캐릭터");
+			node->children.push_back(leaf);
+		}
+	}
+
+	return root;
 }
 
-// 유클리드 알고리즘 [호제법]
-// a > b
-// GCD(1071, 1029)
-// GCD(1029, 1071 % 1029 =42)
-// GCD(42, 1029 = 21);
-// GCD(21, 0) = 21
-
-int GCD(int a, int b)
+void PrintTree(Node* root, int depth = 0)
 {
-	if (b == 0)
-		return a;
+	for (int i = 0; i < depth; i++)
+	{
+		cout << "|";
+		if (i == depth - 1)
+			cout << "-";
+	}
 
-	return GCD(b, a % b);
+	cout << root->data << endl;
+
+	int size = root->children.size();
+	for (int i = 0; i < size; i++)
+	{
+		Node* node = root->children[i];
+		PrintTree(node, depth+1);
+	}
+}
+
+int GetHeight(Node* root)
+{
+	int ret = 1;
+	int size = root->children.size();
+	for (int i = 0; i < size; i++)
+	{
+		Node* node = root->children[i];
+		int h = GetHeight(node) + 1;
+
+		if (ret < h)
+			ret = h;
+	}
+
+	return ret;
 }
 
 int main()
 {
-	cout << " 유클리드 호제 (7123, 2629) = " << GCD(7123, 2629) << endl;
+	Node* root = CreateTree();
+	PrintTree(root);
+	cout << endl << GetHeight(root) << endl;
 }
