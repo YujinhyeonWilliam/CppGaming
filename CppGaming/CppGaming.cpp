@@ -95,6 +95,9 @@ void Dijikstra(int now)
 			pq.push(VertexCost(nextCost, dest));
 		}
 	}
+
+	for(int i=0; i<6; i++)
+		cout << "베스트 케이스 " << i << " : "<< best[i] << endl;
 }
 
 int main()
