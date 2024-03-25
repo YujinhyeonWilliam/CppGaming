@@ -20,6 +20,7 @@ public:
 private:
 	void	CalculatePath_RightHand();
 	void	CalculatePath_BFS();
+	void	CalculatePath_Astar();
 private:
 	Pos		_pos;
 	int32	_dir = DIR_UP;
