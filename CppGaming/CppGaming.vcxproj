@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="CppGaming.cpp" />
     <ClCompile Include="Helper.cpp" />
+    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
