@@ -4,49 +4,37 @@ using namespace std;
 #include <list>
 #include <queue>
 
-
-class Iterator
+vector<int> numbers;
+// O(logN)
+void BinarySearch(int N)
 {
-public:
-	Iterator() : _data(nullptr) {}
-	Iterator(int* data) : _data(data) {}
-	bool operator==(const Iterator& other)
-	{
-		return _data == other._data;
-	}
-	bool operator!=(const Iterator& other)
-	{
-		return _data != other._data;
-	}
-	void operator++()
-	{
-		_data++;
-	}
+	int left = 0;
+	int right = numbers.size() - 1;
 
-	int& operator*()
+	while (left <= right)
 	{
-		return *_data;
+		cout << " 탐색 범위 : " << left << "~" << right << endl;
+		int mid = (left + right) / 2;
+		if (N < numbers[mid])
+		{
+			cout << N << "<" << numbers[mid] << endl;
+			right = mid - 1;
+		}
+		else if (N > numbers[mid])
+		{
+			cout << N << ">" << numbers[mid] << endl;
+			left = mid + 1;
+		}
+		else
+		{
+			cout << "찾았음!" << endl;
+			break;
+		}
 	}
-
-public:
-	int* _data;
-};
-class Inventory
-{
-public:
-	using iterator = Iterator;
-
-	iterator begin() { return iterator(&_items[0]); }
-	iterator end()	 { return iterator(&_items[10]); }
-	int _items[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-};
+}
 
 int main()
 {
-	Inventory inventory;
-	
-	for (auto item : inventory)
-	{
-		cout << item << endl;
-	}
+	numbers = { 1, 8, 15, 23, 32, 44, 56, 63, 81, 91 };
+	BinarySearch(44);
 }
