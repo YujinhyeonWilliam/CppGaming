@@ -7,58 +7,75 @@
 #include <algorithm>
 using namespace std;
 
-enum class ItemType
+bool Descending(int a, int b) { return a < b; }
+bool Ascending(int a, int b) { return a > b; }
+
+template<typename T>
+void BubbleSort(vector<int>& v, T predicate)
 {
-	None,
-	Armor,
-	Weapon,
-	Jewelry,
-	Consumable
-};
+	int i, j;
+	const int size = v.size();
 
-enum class Rarity
+	// O(n^2)
+	for (i = 0; i < size - 1; i++)
+	{
+		for (j = 0; j < size - 1 - i; j++)
+		{
+			if (predicate(v[j], v[j + 1]))
+			{
+				swap(v[j], v[j + 1]);
+			}
+		}
+	}
+
+}
+
+template<typename T>
+void SelectionSort(vector<int>& v, T predicate)
 {
-	Common,
-	Rare,
-	Unique
-};
+	const int n = v.size();
 
-class Item
+	// O(n^2)
+	for (int i = 0; i < n - 1; i++)
+	{
+		int bestIdx = i;
+
+		for (int j = i + 1; j < n; j++)
+		{
+			if (predicate(v[bestIdx], v[j]))
+				bestIdx = j;
+		}
+
+		if(i != bestIdx)
+		   swap(v[i], v[bestIdx]);
+	}
+}
+
+// 총 소요 시간 : O(2nLogn), 시간복잡도 : O(nLogn)
+void HeapSort(vector<int>& v)
 {
-public:
-	Item(){}
-	Item(int itemid, Rarity rarity, ItemType type) : _itemId(itemid), _rarity(rarity), _type(type){}
+	priority_queue<int, vector<int>, greater<int>> pq;
 
+	// O(nLogn)
+	for (int num : v) // n
+		pq.push(num); // logN
 
-public:
-	int _itemId = 0;
-	Rarity _rarity = Rarity::Common;
-	ItemType _type = ItemType::None;
-};
+	v.clear();
+
+	// O(nLogn)
+	while (pq.empty() == false)
+	{
+		v.push_back(pq.top()); // O(1)
+		pq.pop(); // O(logN)
+	}
+}
 
 int main()
 {
-	vector<Item> v;
-	v.push_back(Item(661, Rarity::Common, ItemType::Weapon));
-	v.push_back(Item(12, Rarity::Unique, ItemType::Armor));
-	v.push_back(Item(31, Rarity::Rare, ItemType::Jewelry));
-	v.push_back(Item(4234, Rarity::Rare, ItemType::Consumable));
-	v.push_back(Item(124, Rarity::Rare, ItemType::Weapon));
+	vector<int> v{ 1, 5, 3, 4, 2 };
 
-	{
-		Rarity wantedRarity = Rarity::Unique;
-		int itemId = 0;
-		auto RarityPredicLambda =
-		[&wantedRarity, itemId](Item& item)
-		{
-			return item._rarity == wantedRarity;
-		};
-
-		auto it = std::find_if(v.begin(), v.end(), RarityPredicLambda);
-		
-		if (it == v.end())
-			cout << "못찾음." << endl;
-		else
-			cout << "찾음. id = " << it->_itemId << endl;
-	}
+	//std::sort(v.begin(), v.end());
+	// BubbleSort(v, Descending);
+	// SelectionSort(v, Ascending);
+	// HeapSort(v);
 }
