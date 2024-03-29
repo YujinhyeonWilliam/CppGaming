@@ -7,75 +7,68 @@
 #include <algorithm>
 using namespace std;
 
-bool Descending(int a, int b) { return a < b; }
-bool Ascending(int a, int b) { return a > b; }
-
-template<typename T>
-void BubbleSort(vector<int>& v, T predicate)
+// O(n)
+void MergeResult(vector<int>& v, int left, int mid, int right)
 {
-	int i, j;
-	const int size = v.size();
+	int leftIdx = left;
+	int rightIdx = mid+1;
 
-	// O(n^2)
-	for (i = 0; i < size - 1; i++)
+	vector<int> temp;
+
+	while (leftIdx <= mid && rightIdx <= right) 
 	{
-		for (j = 0; j < size - 1 - i; j++)
+		if (v[leftIdx] <= v[rightIdx])
 		{
-			if (predicate(v[j], v[j + 1]))
-			{
-				swap(v[j], v[j + 1]);
-			}
+			temp.push_back(v[leftIdx]);
+			leftIdx++;
+		}
+		else
+		{
+			temp.push_back(v[rightIdx]);
+			rightIdx++;
 		}
 	}
 
-}
-
-template<typename T>
-void SelectionSort(vector<int>& v, T predicate)
-{
-	const int n = v.size();
-
-	// O(n^2)
-	for (int i = 0; i < n - 1; i++)
+	if (leftIdx > mid)
 	{
-		int bestIdx = i;
-
-		for (int j = i + 1; j < n; j++)
+		while (rightIdx <= right)
 		{
-			if (predicate(v[bestIdx], v[j]))
-				bestIdx = j;
+			temp.push_back(v[rightIdx]);
+			rightIdx++;
 		}
-
-		if(i != bestIdx)
-		   swap(v[i], v[bestIdx]);
 	}
-}
-
-// 총 소요 시간 : O(2nLogn), 시간복잡도 : O(nLogn)
-void HeapSort(vector<int>& v)
-{
-	priority_queue<int, vector<int>, greater<int>> pq;
-
-	// O(nLogn)
-	for (int num : v) // n
-		pq.push(num); // logN
-
-	v.clear();
-
-	// O(nLogn)
-	while (pq.empty() == false)
+	else
 	{
-		v.push_back(pq.top()); // O(1)
-		pq.pop(); // O(logN)
+		while (leftIdx <= mid)
+		{
+			temp.push_back(v[leftIdx]);
+			leftIdx++;
+		}
 	}
+
+	const int tempSize = temp.size();
+	for (int i = 0; i < tempSize; i++)
+		v[left + i] = temp[i];
 }
+
+// 최종 시간 복잡도 : O(nlogn)
+void MergeSort(vector<int>& v, int left, int right)
+{
+	if (left >= right)
+		return;
+
+	// 분할 O(logN)
+	int mid = (left + right) / 2;
+	MergeSort(v, left, mid);
+	MergeSort(v, mid + 1, right);
+
+	// 결합 O(n)
+	MergeResult(v, left, mid, right);
+}
+
 
 int main()
 {
 	vector<int> v{ 1, 5, 3, 4, 2 };
-
-	//std::sort(v.begin(), v.end());
-	// BubbleSort(v, Descending);
-	// SelectionSort(v, Ascending);
-	// HeapSort(v);
+	MergeSort(v, 0, v.size() - 1);
 }
