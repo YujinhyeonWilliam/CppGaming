@@ -7,29 +7,58 @@
 #include <algorithm>
 using namespace std;
 
+enum class ItemType
+{
+	None,
+	Armor,
+	Weapon,
+	Jewelry,
+	Consumable
+};
+
+enum class Rarity
+{
+	Common,
+	Rare,
+	Unique
+};
+
+class Item
+{
+public:
+	Item(){}
+	Item(int itemid, Rarity rarity, ItemType type) : _itemId(itemid), _rarity(rarity), _type(type){}
+
+
+public:
+	int _itemId = 0;
+	Rarity _rarity = Rarity::Common;
+	ItemType _type = ItemType::None;
+};
 
 int main()
 {
-	vector<int> v{ 1, 4, 3, 5, 8, 2 };
+	vector<Item> v;
+	v.push_back(Item(661, Rarity::Common, ItemType::Weapon));
+	v.push_back(Item(12, Rarity::Unique, ItemType::Armor));
+	v.push_back(Item(31, Rarity::Rare, ItemType::Jewelry));
+	v.push_back(Item(4234, Rarity::Rare, ItemType::Consumable));
+	v.push_back(Item(124, Rarity::Rare, ItemType::Weapon));
 
-	for (auto it = v.begin(); it != v.end(); )
 	{
-		if (*it % 2 != 0)
-			it = v.erase(it);
-		else
-			it++;
-	}
-	
-	struct IsOdd
-	{
-		bool operator()(int n)
+		Rarity wantedRarity = Rarity::Unique;
+		int itemId = 0;
+		auto RarityPredicLambda =
+		[&wantedRarity, itemId](Item& item)
 		{
-			return n % 2 != 0;
-		}
-	};
+			return item._rarity == wantedRarity;
+		};
 
-	auto it = std::remove_if(v.begin(), v.end(), IsOdd());
-	v.erase(it, v.end());
-
-
+		auto it = std::find_if(v.begin(), v.end(), RarityPredicLambda);
+		
+		if (it == v.end())
+			cout << "못찾음." << endl;
+		else
+			cout << "찾음. id = " << it->_itemId << endl;
+	}
 }
