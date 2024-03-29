@@ -10,42 +10,23 @@ using namespace std;
 
 int main()
 {
-	// C 스타일 문자열
-	std::string str = "jinhyeon";
-	std::string str2 = "jinhyeon";
+	setlocale(LC_ALL, "");
+	cout << " LC_ALL, " << setlocale(LC_ALL, NULL) << endl;
 
-	// (1) 비교
-	if (str == str2)
-		cout << "같음" << endl;
-	else
-		cout << "다름" << endl;
+	// CP949
+	const char* test = "aa유진현";
+	cout << test << endl;
 
-	// (2) 복사
-	string str3;
-	str3 = str;
+	// UTF-8
+	auto test2 = u8"aa유진현입니다.";
+	setlocale(LC_ALL, "en_US.UTF-8");
+	cout << test2 << endl;
+	setlocale(LC_ALL, "");
 
+	// UTF-16
+	auto test3 = L"aa유진현입니다.";
+	wchar_t ch = L'유';
+	wstring name = L"aaa유진현 입니다.";
+	wcout << name << endl;
 
-	// (3) 추가
-	str.append("12334");
-	str += " 1234";
-
-	// (4) 찾기
-	auto c = str.find("yeo");
-	if (c == string::npos)
-	{
-		cout << " 못찾음 " << endl;
-	}
-
-	// (5) 교체
-	string chatStr = "Shit !!!";
-	string findStr = "Shit";
-	string replaceStr = "****";
-
-	chatStr.replace(chatStr.find(findStr), findStr.length(), replaceStr);
-
-	// (6) 자르기
-	string subStr = str.substr(0, 3);
-
-	// (7) C 스타일 변환
-	const char* nameC = str.c_str();
 }
