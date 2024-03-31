@@ -251,8 +251,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-28T09:53:47.954Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -260,9 +259,9 @@
               "Title": "CppGaming.cpp",
               "DocumentMoniker": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
               "RelativeDocumentMoniker": "CppGaming\\CppGaming.cpp",
-              "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp",
-              "RelativeToolTip": "CppGaming\\CppGaming.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAABAAAA",
+              "ToolTip": "C:\\CppProjects\\CppGaming\\CppGaming\\CppGaming.cpp*",
+              "RelativeToolTip": "CppGaming\\CppGaming.cpp*",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAF8AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-25T10:05:36.152Z",
               "IsPinned": true,
