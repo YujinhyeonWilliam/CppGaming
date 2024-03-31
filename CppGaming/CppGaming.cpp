@@ -5,52 +5,33 @@
 #include <map>
 #include <unordered_map>
 #include <algorithm>
+#include <windows.h>
 using namespace std;
 
-template<typename T>
-class SharedPtr
+int cache[50][50];
+
+int combination(int n, int r)
 {
-public:
-	SharedPtr(T* ptr) : _ptr(ptr) {}
+	// 기저 사례
+	if (r == 0 || n == r)
+		return 1;
 
-public:
-	T* _ptr;
-	int _refCount = 1;
-};
+	// 이미 답을 구한 적이 있으면 바로 반환
+	int& ret = cache[n][r];
+	if (ret != -1)
+		return ret;
 
-class Knight
-{
-public:
-	Knight(){}
-	Knight(int id) : _id(id){}
-	~Knight()
-	{
-		cout << " Knight 소멸" << endl;
-	}
+	return ret = combination(n - 1, r - 1) + combination(n - 1, r);
+}
 
-	void Attack()
-	{
-		if (!_target.expired())
-		{
-			shared_ptr<Knight> spr = _target.lock();
-			spr->_hp -= _damage;
-		}
-	}
-	int _id = 0;
-	int _hp = 0;
-	int _damage = 100;
-	weak_ptr<Knight> _target;
-};
 
 int main()
 {
-	shared_ptr<Knight> k1 = make_shared<Knight>(1);
-	shared_ptr<Knight> k2 = make_shared<Knight>(2);
-	k1->_target = k2;
-	k2->_target = k1;
+	::memset(cache, -1, sizeof(cache));
 
-	// unique_ptr
-	unique_ptr<Knight> k3(new Knight());
-	unique_ptr<Knight> k4 = k3;
-
+	__int64 start = ::GetTickCount64();
+	int lotto = combination(45, 6);
+	__int64 end = ::GetTickCount64();
+	cout << "Lotto chances = " << lotto << endl;
+	cout << end - start << "ms" << endl;
 }
