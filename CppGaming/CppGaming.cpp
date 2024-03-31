@@ -7,101 +7,109 @@
 #include <algorithm>
 using namespace std;
 
-class Pet
-{
-
-};
-
 class Knight
 {
 public:
 	
-	Knight()
-	{
-
-	}
-
 	~Knight()
 	{
-		if (_pet != nullptr)
-			delete _pet;
+		cout << " Knight 소멸" << endl;
 	}
 
-	// 복사 생성자
-	Knight(const Knight& knight)
+	void Attack()
 	{
-		_hp = knight._hp;
-
-
-		// 깊은 복사
-		if (knight._pet)
-			_pet = new Pet(*knight._pet);
-
-		// 얕은 복사
-		//_pet = knight._pet;
+		if (_target)
+			_target->_hp -= _damage;
 	}
-
-	// 복사 대입 연산자
-	void operator=(const Knight& knight)
-	{
-		_hp = knight._hp;
-		
-
-		// 깊은 복사
-		if (knight._pet)
-			_pet = new Pet(*knight._pet);
-
-		// 얕은 복사
-		//_pet = knight._pet;
-	}
-
-
-	// 이동 생성자
-	Knight(Knight&& knight) noexcept
-	{
-		_hp = knight._hp;
-		_pet = knight._pet;
-		knight._pet = nullptr;
-	}
-
-	// 이동 대입 연산자
-	void operator=(Knight&& knight) noexcept
-	{
-		_hp = knight._hp;
-		_pet = knight._pet;
-		knight._pet = nullptr;
-	}
-
 
 	int _hp = 0;
-	Pet* _pet = nullptr;
+	int _damage = 100;
+	shared_ptr<Knight> _target = nullptr;
 };
 
-void TestKnight_Copy(Knight knight)
-{
-	knight._hp = 100;
-}
 
-void TestKnight_LValueRef(Knight& knight)
+template<typename T>
+class Wrapper
 {
-	knight._hp = 100;
-}
+public:
 
+	Wrapper(T* ptr) : _ptr(ptr) {}
+	~Wrapper()
+	{
+		if (_ptr != nullptr)
+		{
+			delete _ptr;
+			_ptr = nullptr;
+		}
 
-void TestKnight_ConstValueRef(const Knight& knight)
+		cout << " Wrapper 클래스 소멸자. 메모리 해제 완료? = " << (_ptr == nullptr ? "true" : "false") << endl;
+	}
+
+public:
+	T* _ptr;
+};
+
+class RefCountBlock
 {
-	//knight._hp = 100;
-}
+public:
+	int _refCount = 1;
+};
 
-void TestKnight_RValueRef(Knight&& knight)
+template<typename T>
+class SharedPtr
 {
-	//knight._hp = 100;
-}
+public:
+	SharedPtr(){}
+	SharedPtr(T* ptr) : _ptr(ptr) 
+	{
+		if (ptr)
+		{
+			_block = new ReCountBlock();
+			cout << " RefCount: " << _block->_refCount << endl;
+		}
+	}
+
+	SharedPtr(const SharedPtr& other) : _ptr(other._ptr), _block(other._block)
+	{
+		if (_ptr)
+		{
+			_block->_refCount++;
+		}
+	}
+
+	void operator=(const SharedPtr& other)
+	{
+		_ptr = other._ptr;
+		_block = other._block;
+
+		if (_ptr)
+			_block->_refCount++;
+	}
+
+	~SharedPtr()
+	{
+		if (_ptr)
+		{
+			_block->_refCount--;
+
+			if (_block->_refCount == 0)
+			{
+				delete _ptr;
+				delete _block;
+				cout << "Delete Data" << endl;
+			}
+		}
+	}
+
+public:
+	T* _ptr = nullptr;
+	RefCountBlock* _block = nullptr;
+};
+
 
 int main()
 {
-	int a = 3;
-	Knight k1;
-	k1._pet = new Pet();
-	Knight k3 = std::move(k1);
+	shared_ptr<Knight> k1(new Knight());
+	shared_ptr<Knight> k2(new Knight());
+	k1->_target = k2;
 }
