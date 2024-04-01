@@ -20,32 +20,31 @@ void DevScene::Init()
 
 void DevScene::Update()
 {
-	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
-	if (GET_SINGLE(InputManager)->GetButton(KeyType::A))
-	{
-		_playerPos.x -= deltaTime * _speed;
-	}
-
-	if (GET_SINGLE(InputManager)->GetButton(KeyType::D))
-	{
-		_playerPos.x += deltaTime * _speed;
-	}
-
-	if (GET_SINGLE(InputManager)->GetButton(KeyType::W))
-	{
-		_playerPos.y -= deltaTime * _speed;
-	}
-
-	if (GET_SINGLE(InputManager)->GetButton(KeyType::S))
-	{
-		_playerPos.y += deltaTime * _speed;
-	}
+	//float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
+	//if (GET_SINGLE(InputManager)->GetButton(KeyType::A))
+	//{
+	//	_playerPos.x -= deltaTime * _speed;
+	//}
+	//
+	//if (GET_SINGLE(InputManager)->GetButton(KeyType::D))
+	//{
+	//	_playerPos.x += deltaTime * _speed;
+	//}
+	//
+	//if (GET_SINGLE(InputManager)->GetButton(KeyType::W))
+	//{
+	//	_playerPos.y -= deltaTime * _speed;
+	//}
+	//
+	//if (GET_SINGLE(InputManager)->GetButton(KeyType::S))
+	//{
+	//	_playerPos.y += deltaTime * _speed;
+	//}
 }
 
 void DevScene::Render(HDC hdc)
 {
 	// Player
-	::Rectangle(hdc, 200, 200, 400, 400);
 	Utils::DrawCircle(hdc, _playerPos, 50);
 
 	// Monster
