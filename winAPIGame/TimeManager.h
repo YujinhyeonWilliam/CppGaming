@@ -2,7 +2,7 @@
 
 class TimeManager
 {
-	DELCARE_SINGLE(TimeManager);
+	DECLARE_SINGLE(TimeManager);
 
 public:
 	void Init();

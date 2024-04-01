@@ -30,7 +30,7 @@ enum class KeyState
 
 class InputManager
 {
-	DELCARE_SINGLE(InputManager);
+	DECLARE_SINGLE(InputManager);
 
 public:
 	void Init(HWND hwnd);

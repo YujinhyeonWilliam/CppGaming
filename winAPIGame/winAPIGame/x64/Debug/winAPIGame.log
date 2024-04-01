@@ -1,2 +1,12 @@
-﻿  GameCore.cpp
+﻿  pch.cpp
+  DevScene.cpp
+  GameCore.cpp
+  GameScene.cpp
+  InputManager.cpp
+  Scene.cpp
+  SceneManager.cpp
+  TimeManager.cpp
+  Utils.cpp
+  winAPIGame.cpp
+  코드를 생성하고 있습니다...
   winAPIGame.vcxproj -> C:\CppProjects\CppGaming\winAPIGame\x64\Debug\winAPIGame.exe
