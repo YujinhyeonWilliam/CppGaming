@@ -1,4 +1,2 @@
-﻿  GameScene.cpp
-  Missile.cpp
-  코드를 생성하고 있습니다...
-  winAPIGame.vcxproj -> C:\CppProjects\CppGaming\winAPIGame\x64\Debug\winAPIGame.exe
+﻿  EditScene.cpp
+  winAPIGame.vcxproj -> C:\Projects\CppGaming\winAPIGame\x64\Debug\winAPIGame.exe

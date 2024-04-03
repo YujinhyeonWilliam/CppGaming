@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\CppProjects\CppGaming\winAPIGame\x64\Debug\winAPIGame.exe</FullPath>
+      <FullPath>C:\Projects\CppGaming\winAPIGame\x64\Debug\winAPIGame.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

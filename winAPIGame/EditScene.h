@@ -13,6 +13,7 @@ public:
 
 private:
 	vector<pair<POINT, POINT>> _lines;
+
 	bool _setOrigin = true;
 	POINT _lastPos = {};
 };

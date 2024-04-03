@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-winAPIGame",
+      "appliesTo": "winAPIGame/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-winAPIGame",
+      "appliesTo": "winAPIGame/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-winAPIGame",
+      "appliesTo": "winAPIGame/",
+      "type": "launch"
+    }
+  ]
+}
