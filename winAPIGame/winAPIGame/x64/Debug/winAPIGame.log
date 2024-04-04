@@ -1,4 +1,21 @@
-﻿  Missile.cpp
+﻿  pch.cpp
+  DevScene.cpp
+  EditScene.cpp
+  GameCore.cpp
+  GameScene.cpp
+  InputManager.cpp
+  LineMesh.cpp
+  Missile.cpp
+  Monster.cpp
+  Object.cpp
+  ObjectManager.cpp
   Player.cpp
+  ResourceBase.cpp
+  ResourceManager.cpp
+  Scene.cpp
+  SceneManager.cpp
+  TimeManager.cpp
+  Utils.cpp
+  winAPIGame.cpp
   코드를 생성하고 있습니다...
-  winAPIGame.vcxproj -> C:\Projects\CppGaming\winAPIGame\x64\Debug\winAPIGame.exe
+  winAPIGame.vcxproj -> C:\CppProjects\CppGaming\winAPIGame\x64\Debug\winAPIGame.exe
