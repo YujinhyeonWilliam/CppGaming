@@ -34,7 +34,7 @@ void GameCore::Init(HWND hwnd)
 	GET_SINGLE(SceneManager)->Init();
 	GET_SINGLE(ResourceManager)->Init();
 
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::GameScene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::MenuScene);
 }
 
 void GameCore::Update()
