@@ -32,9 +32,8 @@ enum class KeyState
 
 class InputManager
 {
-	DECLARE_SINGLE(InputManager);
-
 public:
+	DECLARE_SINGLE(InputManager);
 	void Init(HWND hwnd);
 	void Update();
 

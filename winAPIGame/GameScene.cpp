@@ -14,23 +14,22 @@ GameScene::~GameScene()
 
 void GameScene::Init()
 {
-	// Create Player 
-	{ 
-		ObjectManager* objManager = GET_SINGLE(ObjectManager);
-		Player* player = objManager->CreateObject<Player>();
-		player->SetPos(Pos{ 400, 400 });
-		objManager->Add(player);
-	}
+	// // Create Player 
+	// { 
+	// 	ObjectManager* objManager = GET_SINGLE(ObjectManager);
+	// 	Player* player = objManager->CreateObject<Player>();
+	// 	player->SetPos(Pos{ 400, 400 });
+	// 	objManager->Add(player);
+	// }
 
 	// Create Monster
 	{
-		for (int32 i = 0; i < 5; i++)
-		{
-			ObjectManager* objManager = GET_SINGLE(ObjectManager);
-			Monster* monster = objManager->CreateObject<Monster>();
-			monster->SetPos(Pos{ static_cast<float>(i+1) * 100, 100 });
-			objManager->Add(monster);
-		}
+	  
+	  ObjectManager* objManager = GET_SINGLE(ObjectManager);
+	  Monster* monster = objManager->CreateObject<Monster>();
+	  monster->SetPos(Pos{400, 400});
+	  objManager->Add(monster);
+	  
 	}
 }
 
