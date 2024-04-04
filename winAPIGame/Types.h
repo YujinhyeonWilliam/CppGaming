@@ -188,6 +188,10 @@ struct Vector
 		return x * other.x + y * other.y;
 	}
 
+	float Cross(Vector other)
+	{
+		return x * other.y - y * other.x;
+	}
 
 	static Vector zero;
 	static Vector one;
