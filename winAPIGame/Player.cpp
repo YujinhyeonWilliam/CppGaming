@@ -80,15 +80,16 @@ void Player::Update()
 
 	if (inputManager->GetButtonUp(KeyType::SpaceBar))
 	{
-		// TODO : ½´ÆÃ
+		// ÃÑ¾Ë ½ºÅÈ ¼³Á¤
 		_playerTurn = false;
 		float percent = GET_SINGLE(UIManager)->GetPowerPercent();
 		float speed = 10.f * percent;
 		float angle = GET_SINGLE(UIManager)->GetBarrelAngle();
 
-		// TODO : ÃÑ¾Ë ½ºÅÈ ¼³Á¤
+		// ½´ÆÃ
 		const float Deg2Rad = PI / 180.f;
 		Bullet* bullet = GET_SINGLE(ObjectManager)->CreateObject<Bullet>();
+		bullet->SetOwner(this);
 		bullet->SetPos(_pos);
 		bullet->SetSpeed(Vector{ speed * ::cos(angle * Deg2Rad), -speed * ::sin(angle * Deg2Rad)});
 		GET_SINGLE(ObjectManager)->Add(bullet);
