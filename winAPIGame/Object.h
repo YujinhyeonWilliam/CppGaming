@@ -18,14 +18,17 @@ public:
 	virtual void Update() abstract;
 	virtual void Render(HDC hdc) abstract;
 
-	ObjectType GetObjectType()		{ return _type; }
-	Pos GetPos()					{ return _pos; }
-	void SetPos(Pos pos)			{ _pos = pos; }
+	ObjectType	GetObjectType()		{ return _type; }
+	Pos			GetPos()					{ return _pos; }
+	void		SetPos(Pos pos)			{ _pos = pos; }
+	float		GetRadius() { return _radius; }
+	void		SetRadius(float value) { _radius = value; }
 
 protected:
 	ObjectType _type = ObjectType::None;
 	Stat	   _stat = {};
 	Pos		   _pos = {};
 	Dir		   _dir = Dir::Left;
+	float	   _radius = 20.f;
 };
 

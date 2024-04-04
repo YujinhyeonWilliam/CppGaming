@@ -5,6 +5,8 @@
 #include "ObjectManager.h"
 #include "ResourceManager.h"
 #include "LineMesh.h"
+#include "UIManager.h"
+#include "Bullet.h"
 
 Player::Player() : Object(ObjectType::Player)
 {
@@ -35,6 +37,8 @@ void Player::Update()
 	if (!GetPlayerTurn())
 		return;
 
+	UpdateFireAngle();
+
 	if (inputManager->GetButton(KeyType::A))
 	{
 		_pos.x -= deltaTime * _stat.speed;
@@ -49,12 +53,12 @@ void Player::Update()
 
 	if (inputManager->GetButton(KeyType::W))
 	{
-		
+		_fireAngle = ::clamp(_fireAngle + 50 * deltaTime, 0.f, 75.f);
 	}
 
 	if (inputManager->GetButton(KeyType::S))
 	{
-		
+		_fireAngle = ::clamp(_fireAngle - 50 * deltaTime, 0.f, 75.f);
 	}
 
 	if (inputManager->GetButton(KeyType::Q))
@@ -67,15 +71,32 @@ void Player::Update()
 
 	}
 
-	if (inputManager->GetButtonDown(KeyType::SpaceBar))
+	if (inputManager->GetButton(KeyType::SpaceBar))
 	{
+		float percent = GET_SINGLE(UIManager)->GetPowerPercent();
+		percent = min(100, percent + 100 * deltaTime);
+		GET_SINGLE(UIManager)->SetPowerPercent(percent);
+	}
 
+	if (inputManager->GetButtonUp(KeyType::SpaceBar))
+	{
+		// TODO : ½´ÆÃ
+		_playerTurn = false;
+		float percent = GET_SINGLE(UIManager)->GetPowerPercent();
+		float speed = 10.f * percent;
+		float angle = GET_SINGLE(UIManager)->GetBarrelAngle();
+
+		// TODO : ÃÑ¾Ë ½ºÅÈ ¼³Á¤
+		const float Deg2Rad = PI / 180.f;
+		Bullet* bullet = GET_SINGLE(ObjectManager)->CreateObject<Bullet>();
+		bullet->SetPos(_pos);
+		bullet->SetSpeed(Vector{ speed * ::cos(angle * Deg2Rad), -speed * ::sin(angle * Deg2Rad)});
+		GET_SINGLE(ObjectManager)->Add(bullet);
 	}
 }
 
 void Player::Render(HDC hdc)
 {
-	//Utils::DrawCircle(hdc, _pos, 50);
 
 	float dirAppliedRatio = _dir == Dir::Left ? 0.5f : -0.5f;
 
@@ -85,13 +106,22 @@ void Player::Render(HDC hdc)
 		mesh->Render(hdc, _pos, dirAppliedRatio, 0.5f);
 	}
 
-	HPEN pen = ::CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
-	HPEN oldPen = (HPEN)::SelectObject(hdc, pen);
+	if (_playerTurn)
+	{
+		RECT rect;
+		rect.bottom = static_cast<LONG>(_pos.y - 60);
+		rect.left = static_cast<LONG>(_pos.x - 10);
+		rect.right = static_cast<LONG>(_pos.x + 10);
+		rect.top = static_cast<LONG>(_pos.y - 80);
 
-	//Utils::DrawLine(hdc, _pos, GetFirePos());
+		HBRUSH brush = ::CreateSolidBrush(RGB(250, 236, 197));
+		HBRUSH oldBrush = (HBRUSH)::SelectObject(hdc, brush);
 
-	::SelectObject(hdc, oldPen);
-	::DeleteObject(pen);
+		::Ellipse(hdc, rect.left, rect.top, rect.right, rect.bottom);
+
+		::SelectObject(hdc, oldBrush);
+		::DeleteObject(brush);
+	}
 }
 
 wstring Player::GetMeshKey()
@@ -100,5 +130,21 @@ wstring Player::GetMeshKey()
 		return L"MissileTank";
 
 	return L"CanonTank";
+}
+
+void Player::UpdateFireAngle()
+{
+	UIManager* uiManager = GET_SINGLE(UIManager);
+	
+	if (_dir == Dir::Left)
+	{
+		uiManager->SetPlayerAngle(180.f);
+		uiManager->SetBarrelAngle(180 - _fireAngle);
+	}
+	else
+	{
+		uiManager->SetPlayerAngle(0.f);
+		uiManager->SetBarrelAngle(_fireAngle);
+	}
 }
 

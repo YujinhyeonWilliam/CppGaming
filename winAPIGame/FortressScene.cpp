@@ -27,21 +27,23 @@ void FortressScene::Init()
 		Player* player = GET_SINGLE(ObjectManager)->CreateObject<Player>();
 		player->SetPlayerType(PlayerType::MissileTank);
 		player->SetPlayerId(0);
-		player->SetPlayerTurn(true);
 
 		GET_SINGLE(ObjectManager)->Add(player);
 		player->SetPos(Vector{ 100, 400 });
+		player->SetPlayerTurn(true);
 	}
 
 	{
 		Player* player = GET_SINGLE(ObjectManager)->CreateObject<Player>();
 		player->SetPlayerType(PlayerType::CanonTank);
 		player->SetPlayerId(1);
-		player->SetPlayerTurn(false);
 
 		GET_SINGLE(ObjectManager)->Add(player);
 		player->SetPos(Vector{ 600, 400 });
+		player->SetPlayerTurn(false);
 	}
+
+	ChangePlayerTurn();
 }
 
 void FortressScene::Update()
@@ -52,15 +54,51 @@ void FortressScene::Update()
 	for (Object* object : objects)
 		object->Update();
 
+	_sumTime += deltaTime;
+	if (_sumTime >= 1.f)
+	{
+		_sumTime = 0.f;
+
+		int32 time = GET_SINGLE(UIManager)->GetRemainTime();
+		time = max(0, time - 1);
+		GET_SINGLE(UIManager)->SetRemainTime(time);
+	
+		if (time == 0)
+			ChangePlayerTurn();
+	}
 }
 
 void FortressScene::Render(HDC hdc)
 {
 	GET_SINGLE(UIManager)->Render(hdc);
 
-
 	const vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects();
 
 	for (Object* object : objects)
 		object->Render(hdc);
+}
+
+void FortressScene::ChangePlayerTurn()
+{
+	_playerTurn = (_playerTurn + 1) % 2;
+	const vector<Object*> objects = GET_SINGLE(ObjectManager)->GetObjects();
+
+	for (Object* object : objects)
+	{
+		if (object->GetObjectType() != ObjectType::Player)
+			continue;
+
+		Player* player = static_cast<Player*>(object);
+		if (player->GetPlayerId() == _playerTurn)
+			player->SetPlayerTurn(true);
+		else
+			player->SetPlayerTurn(false);
+	}
+
+	UIManager* UIManager = GET_SINGLE(UIManager);
+	UIManager->SetRemainTime(10);
+	UIManager->SetStaminaPercent(100.f);
+	UIManager->SetPowerPercent(0.f);
+	UIManager->SetWindPercent(static_cast<float>(-100 + rand() % 200));
+
 }
