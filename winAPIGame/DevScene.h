@@ -13,7 +13,10 @@ public:
 	virtual void Update() override;
 	virtual void Render(HDC hdc) override;
 
+	void AddActor(Actor* actor);
+	void RemovActor(Actor* actor);
+
 public:
-	vector<Actor*> _actors;
+	vector<Actor*> _actors[LAYER_TYPE::LAYER_MAXCOUNT];
 };
 

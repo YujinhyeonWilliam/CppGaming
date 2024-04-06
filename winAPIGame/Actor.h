@@ -1,4 +1,7 @@
 #pragma once
+
+class Component;
+
 class Actor
 {
 public:
@@ -9,10 +12,17 @@ public:
 	virtual void	Tick();
 	virtual void	Render(HDC hdc);
 
-	void			SetPos(Vector2DInt pos) { _pos = pos; }
-	Vector2DInt		GetPos() { return _pos; }
+	void			SetPos(Vector2D pos) { _pos = pos; }
+	Vector2D		GetPos() { return _pos; }
+	void			AddComponent(Component* component);
+	void			RemoveComponent(Component* component);
+
+	void			SetLayer(LAYER_TYPE layer) { _layer = layer; }
+	LAYER_TYPE		GetLayer() { return _layer; }
 
 protected:
-	Vector2DInt		_pos = { 0, 0 };
+	Vector2D		_pos = { 0, 0 };
+	vector<Component*> _components;
+	LAYER_TYPE _layer = LAYER_TYPE::LAYER_OBJECT;
 };
 

@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "SpriteActor.h"
 #include "Sprite.h"
+#include "SceneManager.h"
 
 SpriteActor::SpriteActor()
 {
@@ -29,28 +30,28 @@ void SpriteActor::Render(HDC hdc)
 
 	Vector2DInt size = _sprite->GetSize();
 
-	//::BitBlt(hdc,
+	Vector2D cameraPos = GET_SINGLE(SceneManager)->GetCameraPos();
+
+	//::TransparentBlt(hdc,
 	//	// Destination
-	//	(int32)_pos.x - size.x/2,
-	//	(int32)_pos.y - size.y/2,
+	//	(int32)_pos.x - size.x / 2 - ((int32)cameraPos.x - GWinSizeX/2),
+	//	(int32)_pos.y - size.y / 2 - ((int32)cameraPos.y - GWinSizeY/2),
 	//	size.x,
 	//	size.y,
-	//	// Soruce
 	//	_sprite->GetDC(),
 	//	_sprite->GetPos().x,
 	//	_sprite->GetPos().y,
-	//	SRCCOPY);
+	//	_sprite->GetSize().x,
+	//	_sprite->GetSize().y,
+	//	_sprite->GetTransparent());
 
-	::TransparentBlt(hdc,
-		// Destination
-		(int32)_pos.x - size.x / 2,
-		(int32)_pos.y - size.y / 2,
+	::BitBlt(hdc,
+		(int32)_pos.x - size.x / 2 - ((int32)cameraPos.x - GWinSizeX / 2),
+		(int32)_pos.y - size.y / 2 - ((int32)cameraPos.y - GWinSizeY / 2),
 		size.x,
 		size.y,
 		_sprite->GetDC(),
 		_sprite->GetPos().x,
 		_sprite->GetPos().y,
-		_sprite->GetSize().x,
-		_sprite->GetSize().y,
-		_sprite->GetTransparent());
+		SRCCOPY);
 }

@@ -4,6 +4,7 @@
 #include "TimeManager.h"
 #include "Flipbook.h"
 #include "ResourceManager.h"
+#include "CameraComponent.h"
 
 Player::Player()
 {
@@ -12,6 +13,9 @@ Player::Player()
 	_flipbookDown	= resourceManager->GetFlipBook(L"FB_MoveDown");
 	_flipbookLeft	= resourceManager->GetFlipBook(L"FB_MoveLeft");
 	_flipbookRight	= resourceManager->GetFlipBook(L"FB_MoveRight");
+
+	CameraComponent* camera = new CameraComponent();
+	AddComponent(camera);
 }
 
 Player::~Player()

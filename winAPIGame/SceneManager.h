@@ -15,8 +15,12 @@ public:
 public:
 	void ChangeScene(SceneType sceneType);
 	Scene* GetCurrentScene() { return _scene; }
+
+	Vector2D GetCameraPos() { return _cameraPos; }
+	void SetCameraPos(Vector2D pos) { _cameraPos = pos; }
 private:
 	Scene* _scene;
 	SceneType _sceneType = SceneType::None;
+	Vector2D _cameraPos = { 400, 300 };
 };
 
