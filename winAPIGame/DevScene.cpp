@@ -6,6 +6,9 @@
 #include "ResourceManager.h"
 #include "Texture.h"
 #include "Sprite.h"
+#include "Actor.h"
+#include "SpriteActor.h"
+#include "Player.h"
 
 DevScene::DevScene()
 {
@@ -32,27 +35,47 @@ void DevScene::Init()
 	resourceManager->LoadTexture(L"Exit", L"Sprite\\UI\\Exit.bmp");
 
 	Texture* tex = resourceManager->GetTexture(L"Start");
-	resourceManager->CreateSprite(L"Start_On", tex, 150, 0, 150, 150);
+	resourceManager->CreateSprite(L"Stage01",	resourceManager->GetTexture(L"Stage01"));
+	resourceManager->CreateSprite(L"Start_Off", resourceManager->GetTexture(L"Start"), 0, 0, 150, 150);
+	resourceManager->CreateSprite(L"Start_On",	resourceManager->GetTexture(L"Start"), 150, 0, 150, 150);
+	resourceManager->CreateSprite(L"Edit_Off",	resourceManager->GetTexture(L"Edit"), 0, 0, 150, 150);
+	resourceManager->CreateSprite(L"Edit_On",	resourceManager->GetTexture(L"Edit"), 150, 0, 150, 150);
+	resourceManager->CreateSprite(L"Exit_Off",	resourceManager->GetTexture(L"Exit"), 0, 0, 150, 150);
+	resourceManager->CreateSprite(L"Exit_On",	resourceManager->GetTexture(L"Exit"), 150, 0, 150, 150);
+
+	{
+		Sprite* sprite = resourceManager->GetSprite(L"Stage01");
+		SpriteActor* background = new SpriteActor();
+		background->SetSprite(sprite);
+
+		const Vector2DInt size = sprite->GetSize();
+		background->SetPos(Vector2DInt(size.x/2, size.y/2));
+		_actors.push_back(background);
+	}
+
+	{
+		Sprite* sprite = resourceManager->GetSprite(L"Start_On");
+		Player* player = new Player();
+		player->SetSprite(sprite);
+
+		const Vector2DInt size = sprite->GetSize();
+		player->SetPos(Vector2DInt(size.x / 2, size.y / 2));
+		_actors.push_back(player);
+	}
+
+	for (Actor* actor : _actors)
+		actor->BeginPlay();
 }
 
 void DevScene::Update()
 {
 	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
+	for (Actor* actor : _actors)
+		 actor->Tick();
 }
 
 void DevScene::Render(HDC hdc)
 {
-	Sprite* sprite = GET_SINGLE(ResourceManager)->GetSprite(L"Start_On");
-
-	::BitBlt(hdc,
-		// Destination
-		0,
-		0,
-		GWinSizeX,
-		GWinSizeY,
-		// Soruce
-		sprite->GetDC(),
-		sprite->GetPos().x,
-		sprite->GetPos().y,
-		SRCCOPY);
+	for (Actor* actor : _actors)
+		 actor->Render(hdc);
 }
