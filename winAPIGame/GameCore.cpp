@@ -7,7 +7,7 @@
 
 GameCore::GameCore()
 {
-	int* p = new int();
+
 }
 
 GameCore::~GameCore()
@@ -49,6 +49,8 @@ void GameCore::Render()
 	uint32 fps = GET_SINGLE(TimeManager)->GetFps();
 	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime() * 1000;
 	
+	GET_SINGLE(SceneManager)->Render(_hdcBack);
+
 	{
 		POINT mousePos = GET_SINGLE(InputManager)->GetMousePos();
 		wstring str = std::format(L"Mouse Pos ({0}, {1})", mousePos.x, mousePos.y);
@@ -60,10 +62,7 @@ void GameCore::Render()
 		::TextOut(_hdcBack, 650, 10, str.c_str(), static_cast<int32>(str.size()));
 	}
 
-	GET_SINGLE(SceneManager)->Render(_hdcBack);
-
-	// Double Buffering 
-
+	// Double Buffering
 	// 비트블릿 : 고속 복사 (_hdcBack 내용을 _hdc에 붙여줘라
 	::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY);
 	::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);

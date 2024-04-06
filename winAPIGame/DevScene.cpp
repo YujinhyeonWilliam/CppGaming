@@ -9,6 +9,7 @@
 #include "Actor.h"
 #include "SpriteActor.h"
 #include "Player.h"
+#include "Flipbook.h"
 
 DevScene::DevScene()
 {
@@ -43,6 +44,74 @@ void DevScene::Init()
 	resourceManager->CreateSprite(L"Exit_Off",	resourceManager->GetTexture(L"Exit"), 0, 0, 150, 150);
 	resourceManager->CreateSprite(L"Exit_On",	resourceManager->GetTexture(L"Exit"), 150, 0, 150, 150);
 
+	// Player Up Flipbook
+	{
+		Texture* texture = GET_SINGLE(ResourceManager)->GetTexture(L"PlayerUp");
+		Flipbook* fb = GET_SINGLE(ResourceManager)->CreateFlipBook(L"FB_MoveUp");
+		fb->SetInfo(
+			FlipBookInfo
+			{
+				texture,
+				L"FB_MoveUp",
+				{200, 200},
+				0,
+				9,
+				1,
+				0.5f
+			});
+	}
+
+	// Player Down Flipbook
+	{
+		Texture* texture = GET_SINGLE(ResourceManager)->GetTexture(L"PlayerDown");
+		Flipbook* fb = GET_SINGLE(ResourceManager)->CreateFlipBook(L"FB_MoveDown");
+		fb->SetInfo(
+			FlipBookInfo
+			{
+				texture,
+				L"FB_MoveDown",
+				{200, 200},
+				0,
+				9,
+				1,
+				0.5f
+			});
+	}
+
+	// Player Left Flipbook
+	{
+		Texture* texture = GET_SINGLE(ResourceManager)->GetTexture(L"PlayerLeft");
+		Flipbook* fb = GET_SINGLE(ResourceManager)->CreateFlipBook(L"FB_MoveLeft");
+		fb->SetInfo(
+			FlipBookInfo
+			{
+				texture,
+				L"FB_MoveLeft",
+				{200, 200},
+				0,
+				9,
+				1,
+				0.5f
+			});
+	}
+
+	// Player Right Flipbook
+	{
+		Texture* texture = GET_SINGLE(ResourceManager)->GetTexture(L"PlayerRight");
+		Flipbook* fb = GET_SINGLE(ResourceManager)->CreateFlipBook(L"FB_MoveRight");
+		fb->SetInfo(
+			FlipBookInfo
+			{
+				texture,
+				L"FB_MoveRight",
+				{200, 200},
+				0,
+				9,
+				1,
+				0.5f
+			});
+	}
+
 	{
 		Sprite* sprite = resourceManager->GetSprite(L"Stage01");
 		SpriteActor* background = new SpriteActor();
@@ -54,12 +123,7 @@ void DevScene::Init()
 	}
 
 	{
-		Sprite* sprite = resourceManager->GetSprite(L"Start_On");
 		Player* player = new Player();
-		player->SetSprite(sprite);
-
-		const Vector2DInt size = sprite->GetSize();
-		player->SetPos(Vector2DInt(size.x / 2, size.y / 2));
 		_actors.push_back(player);
 	}
 
