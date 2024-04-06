@@ -1,8 +1,57 @@
-﻿  DevScene.cpp
-C:\CppProjects\CppGaming\winAPIGame\DevScene.cpp(127,47): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  pch.cpp
+C:\CppProjects\CppGaming\winAPIGame\Types.h(331,16): warning C4244: 'return': 'int32'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+C:\CppProjects\CppGaming\winAPIGame\Types.h(345,22): warning C4244: 'return': 'int32'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+C:\CppProjects\CppGaming\winAPIGame\Types.h(350,22): warning C4244: 'return': 'int32'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+  Actor.cpp
+  BoxCollider.cpp
+C:\CppProjects\CppGaming\winAPIGame\BoxCollider.cpp(41,42): warning C4244: '인수': 'float'에서 'int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/BoxCollider.cpp'을(를) 컴파일하는 중)
+  
+C:\CppProjects\CppGaming\winAPIGame\BoxCollider.cpp(41,33): warning C4244: '인수': 'float'에서 'int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/BoxCollider.cpp'을(를) 컴파일하는 중)
+  
+  CameraComponent.cpp
+  Collider.cpp
+  CollisionManager.cpp
+C:\CppProjects\CppGaming\winAPIGame\CollisionManager.cpp(15,13): warning C4267: '초기화 중': 'size_t'에서 'int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/CollisionManager.cpp'을(를) 컴파일하는 중)
+  
+  Component.cpp
+  DevScene.cpp
+C:\CppProjects\CppGaming\winAPIGame\DevScene.cpp(125,47): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/DevScene.cpp'을(를) 컴파일하는 중)
   
-C:\CppProjects\CppGaming\winAPIGame\DevScene.cpp(127,37): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\CppProjects\CppGaming\winAPIGame\DevScene.cpp(125,37): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/DevScene.cpp'을(를) 컴파일하는 중)
   
+  EditScene.cpp
+  Flipbook.cpp
+  FlipbookActor.cpp
+  GameCore.cpp
+  InputManager.cpp
+  Object.cpp
+  Player.cpp
+  ResourceBase.cpp
+  ResourceManager.cpp
+  Scene.cpp
+  SceneManager.cpp
+  SphereCollider.cpp
+C:\CppProjects\CppGaming\winAPIGame\SphereCollider.cpp(41,30): warning C4244: '인수': 'float'에서 'int32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/SphereCollider.cpp'을(를) 컴파일하는 중)
+  
+  Sprite.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  SpriteActor.cpp
+  Texture.cpp
+  TimeManager.cpp
+  Utils.cpp
+  winAPIGame.cpp
+  코드를 생성하고 있습니다...
   winAPIGame.vcxproj -> C:\CppProjects\CppGaming\Binaries\x64\Debug\winAPIGame.exe

@@ -54,6 +54,12 @@
     <Filter Include="소스 파일\05. Comonent\Game">
       <UniqueIdentifier>{238cc592-21ff-44e8-b780-ad9bdee3a9e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\05. Comonent\Collision">
+      <UniqueIdentifier>{2386d4f8-37cb-4e4a-9026-3ac30ae83094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05. Comonent\Camera">
+      <UniqueIdentifier>{0cc115bc-7323-4bd9-85d3-f2b848438117}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="winAPIGame.h">
@@ -141,7 +147,19 @@
       <Filter>소스 파일\03. Objects\Unreal</Filter>
     </ClInclude>
     <ClInclude Include="CameraComponent.h">
-      <Filter>소스 파일\05. Comonent</Filter>
+      <Filter>소스 파일\05. Comonent\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>소스 파일\05. Comonent\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>소스 파일\05. Comonent\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereCollider.h">
+      <Filter>소스 파일\05. Comonent\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>소스 파일\01. Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -222,7 +240,19 @@
       <Filter>소스 파일\03. Objects\Unreal</Filter>
     </ClCompile>
     <ClCompile Include="CameraComponent.cpp">
-      <Filter>소스 파일\05. Comonent</Filter>
+      <Filter>소스 파일\05. Comonent\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>소스 파일\05. Comonent\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>소스 파일\05. Comonent\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereCollider.cpp">
+      <Filter>소스 파일\05. Comonent\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>소스 파일\01. Manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

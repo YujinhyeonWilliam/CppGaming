@@ -8,3 +8,5 @@
 ipch/
 .vs/CppGaming/
 winAPIGame/.vs/
+winAPIGame/pch.h
+Intermediate/x64/Debug/winAPIGame.pch

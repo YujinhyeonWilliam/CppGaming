@@ -1,5 +1,8 @@
 C:\CppProjects\CppGaming\winAPIGame\Actor.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Actor.obj
+C:\CppProjects\CppGaming\winAPIGame\BoxCollider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\BoxCollider.obj
 C:\CppProjects\CppGaming\winAPIGame\CameraComponent.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\CameraComponent.obj
+C:\CppProjects\CppGaming\winAPIGame\Collider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Collider.obj
+C:\CppProjects\CppGaming\winAPIGame\CollisionManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\CollisionManager.obj
 C:\CppProjects\CppGaming\winAPIGame\Component.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Component.obj
 C:\CppProjects\CppGaming\winAPIGame\DevScene.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\DevScene.obj
 C:\CppProjects\CppGaming\winAPIGame\EditScene.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\EditScene.obj
@@ -14,6 +17,7 @@ C:\CppProjects\CppGaming\winAPIGame\ResourceBase.cpp;C:\CppProjects\CppGaming\In
 C:\CppProjects\CppGaming\winAPIGame\ResourceManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\ResourceManager.obj
 C:\CppProjects\CppGaming\winAPIGame\Scene.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Scene.obj
 C:\CppProjects\CppGaming\winAPIGame\SceneManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SceneManager.obj
+C:\CppProjects\CppGaming\winAPIGame\SphereCollider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SphereCollider.obj
 C:\CppProjects\CppGaming\winAPIGame\Sprite.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Sprite.obj
 C:\CppProjects\CppGaming\winAPIGame\SpriteActor.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SpriteActor.obj
 C:\CppProjects\CppGaming\winAPIGame\Texture.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Texture.obj

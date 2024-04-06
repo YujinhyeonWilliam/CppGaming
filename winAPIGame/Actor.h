@@ -1,6 +1,7 @@
 #pragma once
 
 class Component;
+class Collider;
 
 class Actor
 {
@@ -19,6 +20,9 @@ public:
 
 	void			SetLayer(LAYER_TYPE layer) { _layer = layer; }
 	LAYER_TYPE		GetLayer() { return _layer; }
+
+	virtual void OnComponentBeginOverlap(Collider* collider, Collider* other);
+	virtual void OnComponentEndOverlap(Collider* collider, Collider* other);
 
 protected:
 	Vector2D		_pos = { 0, 0 };
