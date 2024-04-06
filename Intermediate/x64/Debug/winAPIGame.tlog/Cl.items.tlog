@@ -1,5 +1,6 @@
 C:\CppProjects\CppGaming\winAPIGame\Actor.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Actor.obj
 C:\CppProjects\CppGaming\winAPIGame\BoxCollider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\BoxCollider.obj
+C:\CppProjects\CppGaming\winAPIGame\Button.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Button.obj
 C:\CppProjects\CppGaming\winAPIGame\CameraComponent.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\CameraComponent.obj
 C:\CppProjects\CppGaming\winAPIGame\Collider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Collider.obj
 C:\CppProjects\CppGaming\winAPIGame\CollisionManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\CollisionManager.obj
@@ -11,6 +12,7 @@ C:\CppProjects\CppGaming\winAPIGame\FlipbookActor.cpp;C:\CppProjects\CppGaming\I
 C:\CppProjects\CppGaming\winAPIGame\GameCore.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\GameCore.obj
 C:\CppProjects\CppGaming\winAPIGame\InputManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\InputManager.obj
 C:\CppProjects\CppGaming\winAPIGame\Object.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Object.obj
+C:\CppProjects\CppGaming\winAPIGame\Panel.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Panel.obj
 C:\CppProjects\CppGaming\winAPIGame\pch.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\pch.obj
 C:\CppProjects\CppGaming\winAPIGame\Player.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Player.obj
 C:\CppProjects\CppGaming\winAPIGame\ResourceBase.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\ResourceBase.obj
@@ -20,7 +22,10 @@ C:\CppProjects\CppGaming\winAPIGame\SceneManager.cpp;C:\CppProjects\CppGaming\In
 C:\CppProjects\CppGaming\winAPIGame\SphereCollider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SphereCollider.obj
 C:\CppProjects\CppGaming\winAPIGame\Sprite.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Sprite.obj
 C:\CppProjects\CppGaming\winAPIGame\SpriteActor.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SpriteActor.obj
+C:\CppProjects\CppGaming\winAPIGame\TestButton.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\TestButton.obj
+C:\CppProjects\CppGaming\winAPIGame\TestPanel.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\TestPanel.obj
 C:\CppProjects\CppGaming\winAPIGame\Texture.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Texture.obj
 C:\CppProjects\CppGaming\winAPIGame\TimeManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\TimeManager.obj
+C:\CppProjects\CppGaming\winAPIGame\UI.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\UI.obj
 C:\CppProjects\CppGaming\winAPIGame\Utils.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Utils.obj
 C:\CppProjects\CppGaming\winAPIGame\winAPIGame.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\winAPIGame.obj

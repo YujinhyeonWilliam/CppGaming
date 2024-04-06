@@ -60,6 +60,12 @@
     <Filter Include="소스 파일\05. Comonent\Camera">
       <UniqueIdentifier>{0cc115bc-7323-4bd9-85d3-f2b848438117}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\06. UI">
+      <UniqueIdentifier>{c08249aa-eca8-4784-83f8-8376d770668e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06. UI\Game">
+      <UniqueIdentifier>{d32e4213-3ac8-4c53-b9b7-670c8e302e43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="winAPIGame.h">
@@ -161,6 +167,21 @@
     <ClInclude Include="CollisionManager.h">
       <Filter>소스 파일\01. Manager</Filter>
     </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>소스 파일\06. UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>소스 파일\06. UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel.h">
+      <Filter>소스 파일\06. UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TestPanel.h">
+      <Filter>소스 파일\06. UI\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TestButton.h">
+      <Filter>소스 파일\06. UI\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="winAPIGame.rc">
@@ -253,6 +274,21 @@
     </ClCompile>
     <ClCompile Include="CollisionManager.cpp">
       <Filter>소스 파일\01. Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>소스 파일\06. UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>소스 파일\06. UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Panel.cpp">
+      <Filter>소스 파일\06. UI</Filter>
+    </ClCompile>
+    <ClCompile Include="TestPanel.cpp">
+      <Filter>소스 파일\06. UI\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TestButton.cpp">
+      <Filter>소스 파일\06. UI\Game</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
