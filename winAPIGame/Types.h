@@ -19,6 +19,7 @@ struct Stat
 	float speed = 0;
 };
 
+#pragma region Vector-related 
 
 struct Vector
 {
@@ -199,7 +200,174 @@ struct Vector
 	float y = 0;
 };
 
-inline Vector Vector::zero = Vector(0, 0);
-inline Vector Vector::one = Vector(1, 1);
+struct VectorInt
+{
+	VectorInt() {}
+	VectorInt(int32 x, int32 y) : x(x), y(y) {}
+	VectorInt(POINT pt) : x(static_cast<int32>(pt.x)), y(static_cast<int32>(pt.y)) {}
+
+#pragma region Operators 
+
+	VectorInt operator+(const VectorInt& other)
+	{
+		VectorInt ret;
+		ret.x = x + other.x;
+		ret.y = y + other.y;
+		return ret;
+	}
+
+	VectorInt operator*(const VectorInt& other)
+	{
+		VectorInt ret;
+		ret.x = x * other.x;
+		ret.y = y * other.y;
+		return ret;
+	}
+
+	VectorInt operator-(const VectorInt& other)
+	{
+		VectorInt ret;
+		ret.x = x - other.x;
+		ret.y = y - other.y;
+		return ret;
+	}
+
+	VectorInt operator/(const VectorInt& other)
+	{
+		VectorInt ret;
+		ret.x = x / other.x;
+		ret.y = y / other.y;
+		return ret;
+	}
+
+	VectorInt operator+(const int32 rhs)
+	{
+		VectorInt ret;
+		ret.x = x + rhs;
+		ret.y = y + rhs;
+		return ret;
+	}
+
+	VectorInt operator-(const int32 rhs)
+	{
+		VectorInt ret;
+		ret.x = x - rhs;
+		ret.y = y - rhs;
+		return ret;
+	}
+
+	VectorInt operator*(const int32 rhs)
+	{
+		VectorInt ret;
+		ret.x = x * rhs;
+		ret.y = y * rhs;
+		return ret;
+	}
+
+	VectorInt operator/(const int32 rhs)
+	{
+		VectorInt ret;
+		ret.x = x / rhs;
+		ret.y = y / rhs;
+		return ret;
+	}
+
+	void operator+=(const VectorInt& other)
+	{
+		x += other.x;
+		y += other.y;
+	}
+
+	void operator-=(const VectorInt& other)
+	{
+		x -= other.x;
+		y -= other.y;
+	}
+
+	void operator*=(const VectorInt& other)
+	{
+		x *= other.x;
+		y *= other.y;
+	}
+
+	void operator/=(const VectorInt& other)
+	{
+		x /= other.x;
+		y /= other.y;
+	}
+
+	void operator+=(const int32 rhs)
+	{
+		x += rhs;
+		y += rhs;
+	}
+
+	void operator-=(const int32 rhs)
+	{
+		x -= rhs;
+		y -= rhs;
+	}
+
+	void operator*=(const int32 rhs)
+	{
+		x *= rhs;
+		y *= rhs;
+	}
+
+	void operator/=(const int32 rhs)
+	{
+		x /= rhs;
+		y /= rhs;
+	}
+
+#pragma endregion
+
+	/// <summary>
+	/// Unity : sqrMagnitude
+	/// </summary>
+	/// <returns></returns>
+	float LengthSquared() const
+	{
+		return x * x + y * y;
+	}
+
+	/// <summary>
+	/// Unity : Magnitude
+	/// </summary>
+	/// <returns></returns>
+	float Length() const
+	{
+		return ::sqrt(LengthSquared());
+	}
+
+	float Dot(VectorInt other)
+	{
+		return x * other.x + y * other.y;
+	}
+
+	float Cross(VectorInt other)
+	{
+		return x * other.y - y * other.x;
+	}
+
+	static VectorInt zero;
+	static VectorInt one;
+	int32 x = 0;
+	int32 y = 0;
+};
+
+
+#pragma region Inline variables
+
+inline Vector Vector::zero = Vector(0.f, 0.f);
+inline Vector Vector::one = Vector(1.f, 1.f);
+inline VectorInt VectorInt::zero = VectorInt(0, 0);
+inline VectorInt VectorInt::one = VectorInt(1, 1);
+
+#pragma endregion
 
 using Pos = Vector;
+using Vector2D = Vector;
+using Vector2DInt = VectorInt;
+
+#pragma endregion
