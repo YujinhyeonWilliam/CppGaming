@@ -52,3 +52,19 @@ bool BoxCollider::CheckCollision(Collider* other)
 	}
 	return false;
 }
+
+RECT BoxCollider::GetRect()
+{
+	Vector2D pos = GetOwner()->GetPos();
+	Vector2D size = GetSize();
+
+	RECT rect =
+	{
+		(int32)(pos.x - (size.x / 2)),
+		(int32)(pos.y - (size.y / 2)),
+		(int32)(pos.x + (size.x / 2)),
+		(int32)(pos.y + (size.y / 2)),
+	};
+
+	return rect;
+}

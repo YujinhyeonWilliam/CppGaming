@@ -138,29 +138,29 @@ void DevScene::Init()
 		Player* player = new Player();
 		player->SetPos({ 100, 100 });
 
-		// BoxCollider* collider = new BoxCollider();
-		// collider->SetSize({ 100, 100 });
-		// GET_SINGLE(CollisionManager)->AddCollider(collider);
-		// player->AddComponent(collider);
+		BoxCollider* collider = new BoxCollider();
+		collider->SetSize({ 100, 100 });
+		GET_SINGLE(CollisionManager)->AddCollider(collider);
+		player->AddComponent(collider);
 
 		AddActor(player);
 	}
 
-	//{
-	//	Actor* test = new Actor();
-	//	test->SetLayer(LAYER_OBJECT);
-	//	test->SetPos({ 1000, 200 });
+	 {
+	 	Actor* test = new Actor();
+	 	test->SetLayer(LAYER_OBJECT);
+	 	test->SetPos({ 300, 200 });
+	 
+	 	BoxCollider* collider = new BoxCollider();
+	 	collider->SetSize({100, 100});
+	 	GET_SINGLE(CollisionManager)->AddCollider(collider);
+	 	test->AddComponent(collider);
+	 	
+	 	AddActor(test);
+	 }
 
-	//	BoxCollider* collider = new BoxCollider();
-	//	collider->SetSize({100, 100});
-	//	GET_SINGLE(CollisionManager)->AddCollider(collider);
-	//	test->AddComponent(collider);
-	//	
-	//	AddActor(test);
-	//}
 
-
-	{
+	/*{
 		TilemapActor* actor = new TilemapActor();
 		AddActor(actor);
 		_tilemapActor = actor;
@@ -174,7 +174,7 @@ void DevScene::Init()
 			_tilemapActor->SetShowDebug(true);
 		}
 
-	}
+	}*/
 
 	for (const vector<Actor*>& actors : _actors)
 		for (Actor* actor : actors)
@@ -186,10 +186,10 @@ void DevScene::Init()
 
 	GET_SINGLE(ResourceManager)->LoadSound(L"BGM", L"Sound\\BGM.wav");
 
-	{
-		Sound* sound = GET_SINGLE(ResourceManager)->GetSound(L"BGM");
-		sound->Play(true);
-	}
+	//{
+	//	Sound* sound = GET_SINGLE(ResourceManager)->GetSound(L"BGM");
+	//	sound->Play(true);
+	//}
 
 	Super::Init();
 }

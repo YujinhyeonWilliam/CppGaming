@@ -15,6 +15,8 @@ public:
 
 	Vector2D GetSize() { return _size; }
 	void SetSize(Vector2D size) { _size = size; }
+
+	RECT GetRect();
 private:
 	Vector2D _size = {};
 
