@@ -35,17 +35,8 @@ void Player::Tick()
 	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 
 	// TODO : 움직여야함
-	if (GET_SINGLE(InputManager)->GetButton(KeyType::W))
-	{
-		_pos.y -= 200 * deltaTime;
-		SetFlipBook(_flipbookUp);
-	}
-	else if (GET_SINGLE(InputManager)->GetButton(KeyType::S))
-	{
-		_pos.y += 200 * deltaTime;
-		SetFlipBook(_flipbookDown);
-	}
-	else if (GET_SINGLE(InputManager)->GetButton(KeyType::A))
+
+	if (GET_SINGLE(InputManager)->GetButton(KeyType::A))
 	{
 		_pos.x -= 200 * deltaTime;
 		SetFlipBook(_flipbookLeft);
@@ -55,6 +46,13 @@ void Player::Tick()
 		_pos.x += 200 * deltaTime;
 		SetFlipBook(_flipbookRight);
 	}
+	else if (GET_SINGLE(InputManager)->GetButtonDown(KeyType::SpaceBar))
+	{
+		Jump();
+	}
+
+	if(!_onGround)
+	  TickGravity();
 }
 
 void Player::Render(HDC hdc)
@@ -71,15 +69,45 @@ void Player::OnComponentBeginOverlap(Collider* collider, Collider* other)
 		return;
 
 	AdjustCollisionPos(b1, b2);
+
+	if (b2->GetCollisionLayer() & CLT_GROUND)
+	{
+	  _onGround = true;
+	  _jumping = false;
+	}
 }
 
 void Player::OnComponentEndOverlap(Collider* collider, Collider* other)
 {
+	BoxCollider* b1 = dynamic_cast<BoxCollider*>(collider);
+	BoxCollider* b2 = dynamic_cast<BoxCollider*>(other);
 
+	if (b1 == nullptr || b2 == nullptr)
+		return;
+
+	if (b2->GetCollisionLayer() & CLT_GROUND)
+		_onGround = false;
+}
+
+void Player::Jump()
+{
+	if (_jumping)
+		return;
+
+	_jumping = true;
+	_onGround = false;
+	_speed.y = -500;
 }
 
 void Player::TickGravity()
 {
+	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
+
+	if (deltaTime > 0.1f)
+		return;
+
+	_speed.y += _gravity * deltaTime;
+	_pos.y += _speed.y * deltaTime;
 }
 
 void Player::AdjustCollisionPos(BoxCollider* b1, BoxCollider* b2)

@@ -28,3 +28,10 @@ enum class ColliderType
 	Box,
 	Sphere
 };
+
+enum COLLISION_LAYER_TYPE
+{
+	CLT_OBJECT = 1 << 0,
+	CLT_GROUND = 1 << 1,
+	CLT_WALL = 1 << 2
+};

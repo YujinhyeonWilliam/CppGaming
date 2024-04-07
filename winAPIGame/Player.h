@@ -18,13 +18,21 @@ public:
 	virtual void OnComponentEndOverlap(Collider* collider, Collider* other) override;
 
 private:
+	void Jump();
 	void TickGravity();
 	void AdjustCollisionPos(BoxCollider* b1, BoxCollider* b2);
 
 private:
-	Flipbook* _flipbookUp = nullptr;
-	Flipbook* _flipbookDown = nullptr;
-	Flipbook* _flipbookLeft = nullptr;
-	Flipbook* _flipbookRight = nullptr;
+	Flipbook*	_flipbookUp = nullptr;
+	Flipbook*	_flipbookDown = nullptr;
+	Flipbook*	_flipbookLeft = nullptr;
+	Flipbook*	_flipbookRight = nullptr;
+
+private:
+	Vector2D	_speed = {};
+	int32		_gravity = 1000;
+	bool		_onGround = false;
+	bool		_jumping = false;
+	
 };
 

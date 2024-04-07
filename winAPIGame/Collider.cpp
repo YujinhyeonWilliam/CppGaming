@@ -27,7 +27,21 @@ void Collider::Render(HDC hdc)
 
 bool Collider::CheckCollision(Collider* other)
 {
+	uint32 layer = other->GetCollisionLayer();
+	if (_collisionFlag & layer)
+		return true;
+
 	return false;
+}
+
+void Collider::AddCollisionFlagLayer(COLLISION_LAYER_TYPE layer)
+{
+	_collisionFlag |= layer;
+}
+
+void Collider::RemoveCollisionFlagLayer(COLLISION_LAYER_TYPE layer)
+{
+	_collisionFlag &= ~layer;
 }
 
 bool Collider::CheckCollisionBox2Box(BoxCollider* b1, BoxCollider* b2)

@@ -10,14 +10,23 @@ public:
 	Collider(ColliderType colliderType);
 	virtual ~Collider() override;
 
-	virtual void BeginPlay() override;
-	virtual void TickComponent() override;
-	virtual void Render(HDC hdc) override;
+	virtual void	BeginPlay() override;
+	virtual void	TickComponent() override;
+	virtual void	Render(HDC hdc) override;
 
-	virtual bool CheckCollision(Collider* other);
+	virtual bool	CheckCollision(Collider* other);
 
-	ColliderType GetColliderType() { return _colliderType; }
-	void SetShowDebug(bool show) { _showDebug = show; }
+	ColliderType	GetColliderType() { return _colliderType; }
+	void			SetShowDebug(bool show) { _showDebug = show; }
+	void			SetCollisionFlag(uint32 flag) { _collisionFlag = flag; }
+	uint32			GetCollisionFlag() { return _collisionFlag; }
+	void			ResetCollisionFlag() { _collisionFlag = 0; }
+	void			AddCollisionFlagLayer(COLLISION_LAYER_TYPE layer);
+	void			RemoveCollisionFlagLayer(COLLISION_LAYER_TYPE layer);
+
+	void							SetCollisionLayer(COLLISION_LAYER_TYPE layer) { _collisionLayer = layer; }
+	COLLISION_LAYER_TYPE			GetCollisionLayer() { return _collisionLayer; }
+
 
 	unordered_set<Collider*>& GetCollisionMap() { return _collisionMap; }
 public:
@@ -32,6 +41,9 @@ protected:
 private:
 	unordered_set<Collider*> _collisionMap;
 
-	uint32 _flag = 0;
+	// 나는 누구
+	COLLISION_LAYER_TYPE _collisionLayer = CLT_OBJECT;
+	// 누구랑 충돌?
+	uint32 _collisionFlag = 0xFFFFFFFF;
 };
 
