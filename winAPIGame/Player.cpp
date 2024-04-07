@@ -34,25 +34,18 @@ void Player::Tick()
 	Super::Tick();
 	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 
-	// TODO : 움직여야함
+	TickInput(deltaTime);
 
-	if (GET_SINGLE(InputManager)->GetButton(KeyType::A))
+	switch (_state)
 	{
-		_pos.x -= 200 * deltaTime;
-		SetFlipBook(_flipbookLeft);
-	}
-	else if (GET_SINGLE(InputManager)->GetButton(KeyType::D))
-	{
-		_pos.x += 200 * deltaTime;
-		SetFlipBook(_flipbookRight);
-	}
-	else if (GET_SINGLE(InputManager)->GetButtonDown(KeyType::SpaceBar))
-	{
-		Jump();
-	}
-
-	if(!_onGround)
-	  TickGravity();
+	  case PlayerState::MoveGround: 
+		  TickMoveGround(deltaTime); 
+		  break;
+	  case PlayerState::JumpFall: 
+		  TickJumpFall(deltaTime);
+		  TickGravity(deltaTime);
+		  break;
+	}	
 }
 
 void Player::Render(HDC hdc)
@@ -72,8 +65,7 @@ void Player::OnComponentBeginOverlap(Collider* collider, Collider* other)
 
 	if (b2->GetCollisionLayer() & CLT_GROUND)
 	{
-	  _onGround = true;
-	  _jumping = false;
+		SetState(PlayerState::MoveGround);
 	}
 }
 
@@ -86,23 +78,69 @@ void Player::OnComponentEndOverlap(Collider* collider, Collider* other)
 		return;
 
 	if (b2->GetCollisionLayer() & CLT_GROUND)
-		_onGround = false;
+	{
+		
+	}
+
+}
+
+void Player::SetState(PlayerState state)
+{
+	if (_state == state)
+		return;
+
+	switch (_state)
+	{
+	case PlayerState::MoveGround:
+		_speed.y = 0;
+		break;
+	case PlayerState::JumpFall:
+		break;
+	}
+
+	_state = state;
+}
+
+void Player::TickMoveGround(float deltaTime)
+{
+	if (GET_SINGLE(InputManager)->GetButtonDown(KeyType::SpaceBar))
+	{
+		Jump();
+	}
+}
+
+void Player::TickJumpFall(float deltaTime)
+{
+
+}
+
+void Player::TickInput(float deltaTime)
+{
+	// TODO 
+
+	if (GET_SINGLE(InputManager)->GetButton(KeyType::A))
+	{
+		_pos.x -= 200 * deltaTime;
+		SetFlipBook(_flipbookLeft);
+	}
+	else if (GET_SINGLE(InputManager)->GetButton(KeyType::D))
+	{
+		_pos.x += 200 * deltaTime;
+		SetFlipBook(_flipbookRight);
+	}
 }
 
 void Player::Jump()
 {
-	if (_jumping)
+	if (_state == PlayerState::JumpFall)
 		return;
 
-	_jumping = true;
-	_onGround = false;
+	SetState(PlayerState::JumpFall);
 	_speed.y = -500;
 }
 
-void Player::TickGravity()
+void Player::TickGravity(float deltaTime)
 {
-	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
-
 	if (deltaTime > 0.1f)
 		return;
 
