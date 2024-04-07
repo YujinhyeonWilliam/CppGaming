@@ -19,6 +19,8 @@ C:\CppProjects\CppGaming\winAPIGame\ResourceBase.cpp;C:\CppProjects\CppGaming\In
 C:\CppProjects\CppGaming\winAPIGame\ResourceManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\ResourceManager.obj
 C:\CppProjects\CppGaming\winAPIGame\Scene.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Scene.obj
 C:\CppProjects\CppGaming\winAPIGame\SceneManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SceneManager.obj
+C:\CppProjects\CppGaming\winAPIGame\Sound.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Sound.obj
+C:\CppProjects\CppGaming\winAPIGame\SoundManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SoundManager.obj
 C:\CppProjects\CppGaming\winAPIGame\SphereCollider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SphereCollider.obj
 C:\CppProjects\CppGaming\winAPIGame\Sprite.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Sprite.obj
 C:\CppProjects\CppGaming\winAPIGame\SpriteActor.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SpriteActor.obj

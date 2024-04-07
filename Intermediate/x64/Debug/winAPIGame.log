@@ -1,2 +1,10 @@
-﻿  Tilemap.cpp
+﻿  DevScene.cpp
+C:\CppProjects\CppGaming\winAPIGame\DevScene.cpp(133,47): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/DevScene.cpp'을(를) 컴파일하는 중)
+  
+C:\CppProjects\CppGaming\winAPIGame\DevScene.cpp(133,37): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/DevScene.cpp'을(를) 컴파일하는 중)
+  
+  GameCore.cpp
+  코드를 생성하고 있습니다...
   winAPIGame.vcxproj -> C:\CppProjects\CppGaming\Binaries\x64\Debug\winAPIGame.exe
