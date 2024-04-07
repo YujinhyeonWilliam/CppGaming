@@ -4,6 +4,7 @@ class ResourceBase;
 class Texture;
 class Sprite;
 class Flipbook;
+class Tilemap;
 
 class ResourceManager
 {
@@ -25,6 +26,11 @@ public:
 
 	Flipbook* GetFlipBook(const wstring& key) { return _flipbooks[key]; }
 	Flipbook* CreateFlipBook(const wstring& key);
+
+	Tilemap* GetTilemap(const wstring& key) { return _tilemaps[key]; }
+	Tilemap* CreateTilemap(const wstring& key);
+	void SaveTilemap(const wstring& key, const wstring& path);
+	Tilemap* LoadTilemap(const wstring& key, const wstring& path);
 private:
 	HWND _hwnd;
 	fs::path _resourcePath;
@@ -32,5 +38,6 @@ private:
 	unordered_map<wstring, Texture*> _textures;
 	unordered_map<wstring, Sprite*> _sprites;
 	unordered_map<wstring, Flipbook*> _flipbooks;
+	unordered_map<wstring, Tilemap*> _tilemaps;
 };
 

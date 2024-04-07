@@ -14,8 +14,8 @@
 #include "SphereCollider.h"
 #include "CollisionManager.h"
 #include "UI.h"
-#include "Button.h"
-#include "TestPanel.h"
+#include "TilemapActor.h"
+#include "Tilemap.h"
 
 DevScene::DevScene()
 {
@@ -24,13 +24,14 @@ DevScene::DevScene()
 
 DevScene::~DevScene()
 {
-
+	Clear();
 }
 
 void DevScene::Init()
 {
 	ResourceManager* resourceManager = GET_SINGLE(ResourceManager);
 	resourceManager->LoadTexture(L"Stage01", L"Sprite\\Map\\Stage01.bmp");
+	resourceManager->LoadTexture(L"Tile", L"Sprite\\Map\\Tile.bmp", RGB(128, 128, 128));
 	resourceManager->LoadTexture(L"Sword", L"Sprite\\Item\\Sword.bmp");
 	resourceManager->LoadTexture(L"Potion", L"Sprite\\UI\\Mp.bmp");
 	resourceManager->LoadTexture(L"PlayerDown", L"Sprite\\Player\\PlayerDown.bmp", RGB(128, 128, 128));
@@ -41,8 +42,10 @@ void DevScene::Init()
 	resourceManager->LoadTexture(L"Edit", L"Sprite\\UI\\Edit.bmp");
 	resourceManager->LoadTexture(L"Exit", L"Sprite\\UI\\Exit.bmp");
 
-	Texture* tex = resourceManager->GetTexture(L"Start");
 	resourceManager->CreateSprite(L"Stage01",	resourceManager->GetTexture(L"Stage01"));
+	resourceManager->CreateSprite(L"TileO",	resourceManager->GetTexture(L"Tile"), 0, 0, 48, 48);
+	resourceManager->CreateSprite(L"TileX",	resourceManager->GetTexture(L"Tile"), 48, 0, 48, 48);
+
 	resourceManager->CreateSprite(L"Start_Off", resourceManager->GetTexture(L"Start"), 0, 0, 150, 150);
 	resourceManager->CreateSprite(L"Start_On",	resourceManager->GetTexture(L"Start"), 150, 0, 150, 150);
 	resourceManager->CreateSprite(L"Edit_Off",	resourceManager->GetTexture(L"Edit"), 0, 0, 150, 150);
@@ -131,31 +134,44 @@ void DevScene::Init()
 
 	{
 		Player* player = new Player();
-		{
-			SphereCollider* collider = new SphereCollider();
-			collider->SetRadius(100);
-			player->AddComponent(collider);
-			GET_SINGLE(CollisionManager)->AddCollider(collider);
-		}
+		player->SetPos({ 100, 100 });
+
+		// BoxCollider* collider = new BoxCollider();
+		// collider->SetSize({ 100, 100 });
+		// GET_SINGLE(CollisionManager)->AddCollider(collider);
+		// player->AddComponent(collider);
+
 		AddActor(player);
 	}
 
+	//{
+	//	Actor* test = new Actor();
+	//	test->SetLayer(LAYER_OBJECT);
+	//	test->SetPos({ 1000, 200 });
+
+	//	BoxCollider* collider = new BoxCollider();
+	//	collider->SetSize({100, 100});
+	//	GET_SINGLE(CollisionManager)->AddCollider(collider);
+	//	test->AddComponent(collider);
+	//	
+	//	AddActor(test);
+	//}
+
 
 	{
-		Actor* player = new Actor();
+		TilemapActor* actor = new TilemapActor();
+		AddActor(actor);
+		_tilemapActor = actor;
+
 		{
-			SphereCollider* collider = new SphereCollider();
-			collider->SetRadius(50);
-			player->AddComponent(collider);
-			GET_SINGLE(CollisionManager)->AddCollider(collider);
-			player->SetPos({ 400, 200 });
-		}
-		AddActor(player);
-	}
+			auto* tm = GET_SINGLE(ResourceManager)->CreateTilemap(L"Tilemap_01");
+			tm->SetMapSize({ 63, 43 });
+			tm->SetTileSize(48);
 
-	{
-		TestPanel* ui = new TestPanel();
-		_uis.push_back(ui);
+			_tilemapActor->SetTilemap(tm);
+			_tilemapActor->SetShowDebug(true);
+		}
+
 	}
 
 	for (const vector<Actor*>& actors : _actors)
@@ -164,45 +180,36 @@ void DevScene::Init()
 
 	for (UI* ui : _uis)
 		ui->BeginPlay();
+
+	Super::Init();
 }
 
 void DevScene::Update()
 {
-	float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
+	Super::Update();
 
-	GET_SINGLE(CollisionManager)->Update();
+	//float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
 
-	for(const vector<Actor*>& actors : _actors)
-		for (Actor* actor : actors)
-			 actor->Tick();
-
-	for (UI* ui : _uis)
-		ui->Tick();
 }
 
 void DevScene::Render(HDC hdc)
 {
-	for (const vector<Actor*>& actors : _actors)
+	Super::Render(hdc);
+
+}
+
+void DevScene::Clear()
+{
+	for (const vector<Actor*> actors : _actors)
 		for (Actor* actor : actors)
-			 actor->Render(hdc);
+			SAFE_DELETE(actor);
+
+	for (vector<Actor*> actors : _actors)
+		actors.clear();
 
 	for (UI* ui : _uis)
-		ui->Render(hdc);
+		SAFE_DELETE(ui);
+
+	_uis.clear();
 }
 
-void DevScene::AddActor(Actor* actor)
-{
-	if (actor == nullptr)
-		return;
-
-	_actors[actor->GetLayer()].push_back(actor);
-}
-
-void DevScene::RemovActor(Actor* actor)
-{
-	if (actor == nullptr)
-		return;
-
-	vector<Actor*>& v = _actors[actor->GetLayer()];
-	v.erase(std::remove(v.begin(), v.end(), actor), v.end());
-}

@@ -1,0 +1,41 @@
+#pragma once
+#include "ResourceBase.h"
+
+struct Tile
+{
+	// TODO
+	int32 value = 0;
+};
+
+enum TILE_SIZE
+{
+	TILE_WIDTH = 63,
+	TILE_HEIGHT = 43,
+	TILE_SIZEX = 48,
+	TILE_SIZEY = 48
+};
+
+class Tilemap : public ResourceBase
+{
+public:
+	Tilemap();
+	virtual ~Tilemap() override;
+
+	virtual void LoadFile(const wstring& path) override;
+	virtual void SaveFile(const wstring& path) override;
+
+	Vector2DInt GetMapSize() { return _mapSize;  }
+	int32 GetTileSize() { return _tileSize; }
+	Tile* GetTileAt(Vector2DInt pos);
+	vector<vector<Tile>>& GetTiles() { return _tiles; }
+
+	void SetMapSize(Vector2DInt size);
+	void SetTileSize(int32 size);
+
+private:
+	Vector2DInt _mapSize = {};
+	int32 _tileSize = 0;
+	vector<vector<Tile>> _tiles;
+
+};
+

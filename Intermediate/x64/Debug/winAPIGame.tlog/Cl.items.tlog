@@ -22,9 +22,9 @@ C:\CppProjects\CppGaming\winAPIGame\SceneManager.cpp;C:\CppProjects\CppGaming\In
 C:\CppProjects\CppGaming\winAPIGame\SphereCollider.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SphereCollider.obj
 C:\CppProjects\CppGaming\winAPIGame\Sprite.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Sprite.obj
 C:\CppProjects\CppGaming\winAPIGame\SpriteActor.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\SpriteActor.obj
-C:\CppProjects\CppGaming\winAPIGame\TestButton.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\TestButton.obj
-C:\CppProjects\CppGaming\winAPIGame\TestPanel.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\TestPanel.obj
 C:\CppProjects\CppGaming\winAPIGame\Texture.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Texture.obj
+C:\CppProjects\CppGaming\winAPIGame\Tilemap.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Tilemap.obj
+C:\CppProjects\CppGaming\winAPIGame\TilemapActor.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\TilemapActor.obj
 C:\CppProjects\CppGaming\winAPIGame\TimeManager.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\TimeManager.obj
 C:\CppProjects\CppGaming\winAPIGame\UI.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\UI.obj
 C:\CppProjects\CppGaming\winAPIGame\Utils.cpp;C:\CppProjects\CppGaming\Intermediate\x64\Debug\Utils.obj
